@@ -1,0 +1,1 @@
+	<font color='white'>SaAM Global View </font><font color='grey'>| news | calendar | your intranet | </font>
