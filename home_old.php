@@ -11,15 +11,12 @@
 
 	<title>SaAM V2</title>
 
-
+       <link rel="stylesheet" href="js/webix.css" type="text/css" media="screen" charset="utf-8">
+       <script src="js/webix.js" type="text/javascript" charset="utf-8"></script>
 
 
 	<link type="text/css" rel="stylesheet" href="css/layout-default-latest.css" />
-	<style type="text/css">
 
-
-
-	</style>
 
   	<link rel="stylesheet" href="css/bootstrap.min.css">	<!-- order 1,2,3 IMPORTANT -->
   	<script src="js/jquery.min.js"></script>  				<!-- order 1,2,3 IMPORTANT -->
@@ -152,25 +149,36 @@ var layoutSettings_Inner = {
 
 
 
-
+<!-- GENERAL  FIXED NAVBAR -->
 <?php include('navbar.php'); ?>
 
 
 
-
-
-
-
-
+<!-- GENERAL TEMPLATE LAYOUT -->
 <div id="menu-north"  class="ui-layout-north" style="background-color:#444444;"><?php include('menu_top_home.php'); ?></div>
-<div id="menu-west"  class="ui-layout-west" style="background-image: url('tmp/bg_menu_left.jpg');background-repeat: no-repeat;background-size: cover;"></div>
-<div id="menu-east"  class="ui-layout-east"	style="background-image: url('tmp/bg_admin_right.jpg');background-repeat: no-repeat;background-size: cover;"></div>
-<div id="menu-south"  class="ui-layout-south" style="background-color:#111;"><font color='white'>Outer South (MESSAGES, AUTRES ...), contenu changeant</font></div>
+<div id="menu-west"  class="ui-layout-west"   style="background-image: url('tmp/bg_menu_left.jpg');background-repeat: no-repeat;background-size: cover;"></div>
+<div id="menu-east"  class="ui-layout-east"   style="background-image: url('tmp/bg_admin_right.jpg');background-repeat: no-repeat;background-size: cover;"></div>
+<div id="menu-south"  class="ui-layout-south" style="background-color:#111;"><font color='white'>South (MESSAGES, AUTRES ...), contenu changeant</font></div>
 
+<!-- CONTENT CONTAINER -->
+<div id="content" class="ui-layout-center center" style="padding:0;margin:0;size:auto;">
+    
+    
+    <div id="inner-content" class="ui-layout-center content">
+   
+        <?php 
 
+            // include('home_content.php'); 
+            include('content/content_home.php'); 
 
-<div id="content" class="ui-layout-center center" style"padding:0;margin:0;size:auto;">
-<?php include('home_content.php'); ?>
+        ?>    
+        
+        
+    </div>
+    
+ <div>
+    
+
 
 
 
