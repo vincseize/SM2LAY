@@ -40,6 +40,7 @@
 	
 	
 		center__childOptions: {
+                    // resizable:   true,
 			inset: {
 				top:	0
 			,	bottom:	0
@@ -74,11 +75,43 @@
 
                 }	
 	  
+          
+
+          
+          
 	
 	};
 		
+                
+                
+                          
+           // SET OBJECT POINTERS FOR CONVENIENCE
+            // var $westToggler  = layoutSettings_Outer.togglers.west;
+            // BIND CUSTOM WEST METHODS
+            // $westToggler.find(".btnToggler").click( toggleWest);
+            // CUSTOM WEST METHODS
+            // function toggleWest  (evt) { layoutSettings_Outer.toggle("west"); evt.stopPropagation(); };
+                
+                
+// pane as a DOM element
+$(".ui-layout-west").click(function(){
+    alert( 'this' );
+});
+                
+                
+                
+                
 		
-		
+		$("#inner-content").load('content/content_home.php',
+                {
+                    'inner_content_visible': true, // DONT TOUCH
+                    'header_visible': false, 
+                    'footer_visible':false,
+                    'inner_menu_left_visible': false,
+                    'inner_menu_right_visible': false
+                }
+            
+    );
 		
 		
 		
@@ -107,21 +140,12 @@
 <div id="menu-south"  class="ui-layout-south" style="background-color:#111;"><font color='white'>South (MESSAGES, AUTRES ...), contenu changeant</font></div>
 
 <!-- CONTENT CONTAINER -->
-<div id="content" class="ui-layout-center center" style="padding:0;margin:0;size:auto;overflow:hidden;">
+<div id="content" class="ui-layout-center center" style="padding:0;margin:0;size:auto;overflow:hidden;width:auto;">
     
     
-    <div id="inner-content" class="ui-layout-center content" style="padding:0;margin:0;size:auto;overflow:hidden;">    </div>
+    <div id="inner-content" class="ui-layout-center content" style="padding:0;margin:0;size:auto;overflow:hidden;width:auto;">    </div>
    
-        <?php 
-
-            // include('home_content.php'); 
-            //include('content/content_home.php'); 
-
-        ?>    
         
-        
-        
-         
         
         
         
@@ -145,89 +169,6 @@
 
 
 
-<script type="text/javascript" charset="utf-8">
-    
-    
-    $( document ).ready(function() {
-
-    
-    
-    
-           // webix.ui.fullScreen();
-            webix.ui({
-               container:"inner-content",
-               id:"content_home",
-               // responsive:true, 
-               //autowidth:true,
-               // autoheight:true,
-               //height:350,
-                // width:100,
-               rows:[
-                   {
-                       id:"inner_header",
-                       template:"header", 
-                       height:35 
-                   },
-                   {
-                    id:"resizer_inner_header",       
-                    view:"resizer"},
-                   
-                   
-                   {cols:[
-                       {
-                           id:"inner_menu_left",
-                           template:"menu left",
-                           width:150
-                       },
-                       {
-                           view:"resizer",
-                           id:"resizer_menu_left"
-                       },
-                       {   
-                           template:"inner content"
-                       },
-                                              {
-                           view:"resizer",
-                           id:"resizer_menu right"
-                       },
-                       {
-                           id:"inner_menu_right",
-                           template:"menu right",
-                           width:150
-                       }
-                   ]
-                   },
-                   
-                   
-                   {
-                id:"resizer_inner_footer",              
-                view:"resizer"},
-                   
-                   
-                   
-                   {
-                       id:"inner_footer",
-                       template:"footer", 
-                       height:35 
-                   }
-                   
-                   
-                   
-               ]
-               
-               
-               
-               
-               
-           }).show();
-
-
-
-
-
-});
-
-       </script>
 
 
 
@@ -235,12 +176,6 @@
 
 
 
-
-
-
-
-
-</div>
 
 
 
