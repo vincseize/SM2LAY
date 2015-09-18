@@ -11,7 +11,7 @@
 
 	<title>SaAM V2</title>
 
-       <link rel="stylesheet" href="js/webix.css" type="text/css" media="screen" charset="utf-8">
+       <link rel="stylesheet" href="css/webix.css" type="text/css" media="screen" charset="utf-8">
        <script src="js/webix.js" type="text/javascript" charset="utf-8"></script>
 
 
@@ -35,20 +35,7 @@
 	
 
 
-	var layoutOptions = {
 	
-	
-	
-		center__childOptions: {
-                    // resizable:   true,
-			inset: {
-				top:	0
-			,	bottom:	0
-			,	left:	0
-			,	right:	0
-			}
-		}
-	};
 
 	
 	
@@ -62,6 +49,105 @@
 	
 	$(document).ready(function(){
 	
+        
+        // var wWidth = $(window).width();
+        var wWidth = document.body.clientWidth;
+        var hHeight = document.body.clientHeight;
+        
+        
+        var layoutOptions = {
+	
+	
+	
+		center__childOptions: {
+                   // resizable:   true,
+			inset: {
+				top:	0
+			,	bottom:	0
+			,	left:	0
+			,	right:	0
+			}
+		}
+                
+                
+                
+                
+                
+                
+                ,	north: {
+                        maxSize:				100
+                ,       minSize:				35
+		,	spacing_closed:			1			// HIDE resizer & toggler when 'closed'
+		,	slidable:				false		// REFERENCE - cannot slide if spacing_closed = 0
+		,	initClosed:				false
+
+		}
+                
+                ,	south: {
+			maxSize:				200
+		,	spacing_closed:			1			// HIDE resizer & toggler when 'closed'
+		,	slidable:				true		// REFERENCE - cannot slide if spacing_closed = 0
+		,	initClosed:				true
+
+		}
+ 
+ 
+                 ,	east: {
+			maxSize:				300
+		,	spacing_closed:			1			// HIDE resizer & toggler when 'closed'
+		,	slidable:				true		// REFERENCE - cannot slide if spacing_closed = 0
+		,	initClosed:				true
+
+		}
+                
+                 ,	west: {
+
+			spacing_closed:			1			// HIDE resizer & toggler when 'closed'
+		,	slidable:				true		// REFERENCE - cannot slide if spacing_closed = 0
+		,	initClosed:				false
+
+		}               
+                
+                
+                
+                
+                
+	};
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
             $('body').layout( layoutOptions );
 
@@ -75,6 +161,7 @@
 
                 }	
 	  
+          	
           
 
           
@@ -93,11 +180,13 @@
             // function toggleWest  (evt) { layoutSettings_Outer.toggle("west"); evt.stopPropagation(); };
                 
                 
-// pane as a DOM element
+// Sample trigger on pane as a DOM element
+/*
 $(".ui-layout-west").click(function(){
-    alert( 'this' );
+    alert( 'west' );
 });
-                
+            */
+            
                 
                 
                 
@@ -108,7 +197,12 @@ $(".ui-layout-west").click(function(){
                     'header_visible': false, 
                     'footer_visible':false,
                     'inner_menu_left_visible': false,
-                    'inner_menu_right_visible': false
+                    'inner_menu_right_visible': false,
+                    
+                    // 'wWidth': wWidth-5,  // minus size * 2 resizer left and right and V scrollbar ???
+                    'wWidth': wWidth, 
+                    'hHeight': hHeight, // minus height navBar and H SubMenu
+                    
                 }
             
     );

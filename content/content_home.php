@@ -20,7 +20,8 @@ $footer_visible = $_POST['footer_visible'];
 $inner_menu_left_visible = $_POST['inner_menu_left_visible'];
 $inner_menu_right_visible = $_POST['inner_menu_right_visible'];
 
-// echo $header_visible;
+$wWidth = $_POST['wWidth'];
+$hHeight = $_POST['hHeight'];
 
 ?>
 
@@ -38,7 +39,9 @@ $inner_menu_right_visible = $_POST['inner_menu_right_visible'];
                //autowidth:true,
                // autoheight:true,
                //height:350,
-                // width:100,
+                // width:1024,
+                width:<?php echo $wWidth ?>,
+                // height:<?php echo $hHeight ?>,
                rows:[
                    /*
                    {
