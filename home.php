@@ -191,17 +191,20 @@ $(".ui-layout-west").click(function(){
                 
                 
 		
-		$("#inner-content").load('content/content_home.php',
+		$("#inner-content").load('layout_construct/layout_home.php',
                 {
-                    'inner_content_visible': true, // DONT TOUCH
-                    'header_visible': false, 
-                    'footer_visible':false,
-                    'inner_menu_left_visible': false,
-                    'inner_menu_right_visible': false,
+                    // variables
+                    'content_invisible': false, // DONT TOUCH MINIMAL
+                    'header_invisible': false, 
+                    'footer_invisible':false,
+                    'left_invisible': false,
+                    'right_invisible': false,
                     
                     // 'wWidth': wWidth-5,  // minus size * 2 resizer left and right and V scrollbar ???
                     'wWidth': wWidth, 
-                    'hHeight': hHeight, // minus height navBar and H SubMenu
+                    'hHeight': hHeight, // minus height navBar and H SubMenu ?
+                    'hHeightFooter': 35
+                    
                     
                 }
             
