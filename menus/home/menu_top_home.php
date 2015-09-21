@@ -77,7 +77,16 @@ PROJECTS >
 				{ id:"2",value:"GROUMPF", },
 				{ id:"3",value:"MARCEL ET LA LUNE" },
                                 { id:"4",value:"+" }
-			]
+			],
+                        
+                        
+                                on:{
+					onMenuItemClick:function(id){
+						webix.message("Click: "+this.getMenuItem(id).value);
+					}
+				},
+                        
+                        
 		};
 
 	webix.ui({

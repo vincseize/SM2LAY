@@ -47,10 +47,19 @@
 
 
 $content_invisible = $_POST['content_invisible'];
+$content_page = $_POST['content_page'];
+
 $header_invisible = $_POST['header_invisible'];
+$header_page = $_POST['header_page'];
+
 $footer_invisible = $_POST['footer_invisible'];
+$footer_page = $_POST['footer_page'];
+
 $left_invisible = $_POST['left_invisible'];
+$left_page = $_POST['left_page'];
+
 $right_invisible = $_POST['right_invisible'];
+$right_page = $_POST['right_page'];
 
 $wWidth = $_POST['wWidth'];
 $hHeight = $_POST['hHeight'];
@@ -68,7 +77,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
            // webix.ui.fullScreen();
             webix.ui({
                container:"inner-content",
-               id:"content",
+               id:"home_content",
                // responsive:true, 
                //autowidth:true,
                // autoheight:true,
@@ -82,15 +91,16 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
 
                             {
-                            id:'header',
-                            template:'header',
+                            id:'home_header',
+                            // template:'header',
+                            template:'http-><?php echo $header_page ?>',
                             hidden:<?php echo $header_invisible ?>,
                             height:35
                             }
                             ,
                     
                             {
-                            id:'resizer_inner_header',
+                            id:'home_header_resizer',
                             hidden:true,
                             view:'resizer',
                             }
@@ -104,15 +114,16 @@ $hHeightFooter = $_POST['hHeightFooter'];
                    {cols:[
                            
                             {
-                            id:'left',
-                            template:'left',
+                            id:'home_left',
+                            // template:'left',
+                            template:'http-><?php echo $left_page ?>',
                             hidden:<?php echo $left_invisible ?>,
                             // height:150
                             }
                             ,
                     
                             {
-                            id:'resizer_menu_left',
+                            id:'home_left_resizer',
                             hidden:true,
                             view:'resizer',
                            }
@@ -122,20 +133,18 @@ $hHeightFooter = $_POST['hHeightFooter'];
                                          
             
 
-                        // DEFAULT DONT TOUCH, MINIMAL CONTENT
-                               {
-                                   id:'home_inner_content',
+                            // DEFAULT DONT TOUCH, MINIMAL CONTENT OBLIGATOIRE
+                            {
+                            id:'home_content',
                             // template:'inner content',
-                            template:'http->layout_content/home.php',
+                            template:'http-><?php echo $content_page ?>',
                             }
                             ,
-                        
-
-                            // END DON T TOUCH , MINIMAL CONTENT
+                            // END DON T TOUCH , MINIMAL CONTENT OBLIGATOIRE
 
                             
                             {
-                            id:'resizer_right',
+                            id:'home_right_resizer',
                             view:'resizer',
                             hidden:true
                             }
@@ -143,8 +152,9 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             
                             
                             {
-                            id:'right',
-                            template:'right',
+                            id:'home_right',
+                            // template:'right',
+                            template:'http-><?php echo $right_page ?>',
                             hidden:<?php echo $right_invisible ?>,
                             //height:150
                             }
@@ -169,7 +179,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
                             
                             {
-                            id:'resizer__footer',
+                            id:'home_footer_resizer',
                             view:'resizer',
                             hidden:false
                             }
@@ -177,8 +187,9 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             
                             
                             {
-                            id:'footer',
-                            template:'footer',
+                            id:'home_footer',
+                            //template:'footer',
+                            template:'http-><?php echo $footer_page ?>',
                             hidden:<?php echo $footer_invisible ?>,
                             height:35
                             }

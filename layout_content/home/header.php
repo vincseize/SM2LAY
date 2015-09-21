@@ -7,9 +7,18 @@
 ?>
 
 
-LOGIN
 
 
-<SCRIPT LANGUAGE="JavaScript"> 
-document.location.href="home.php" 
-</SCRIPT>
+vue d ensemble | nouvelles | calendrier | charts | intranet
+
+
+
+
+
+
+
+
+
+
+
+

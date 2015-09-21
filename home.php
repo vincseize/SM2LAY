@@ -191,14 +191,24 @@ $(".ui-layout-west").click(function(){
                 
                 
 		
-		$("#inner-content").load('layout_construct/layout_home.php',
+		$("#inner-content").load('layout_construct/home/layout_home.php',
                 {
                     // variables
+                    
                     'content_invisible': false, // DONT TOUCH MINIMAL
+                    'content_page': 'layout_content/home/home.php', // DONT TOUCH MINIMAL
+                    
                     'header_invisible': false, 
-                    'footer_invisible':false,
-                    'left_invisible': false,
-                    'right_invisible': false,
+                    'header_page': 'layout_content/home/header.php',
+                 
+                    'footer_invisible':true,
+                    'footer_page': 'layout_content/home/footer.php',
+                    
+                    'left_invisible': true,
+                    'left_page': 'layout_content/home/left.php',
+                    
+                    'right_invisible': true,
+                    'right_page': 'layout_content/home/right.php',                    
                     
                     // 'wWidth': wWidth-5,  // minus size * 2 resizer left and right and V scrollbar ???
                     'wWidth': wWidth, 
