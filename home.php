@@ -201,13 +201,13 @@ $(".ui-layout-west").click(function(){
                     'header_invisible': false, 
                     'header_page': 'layout_content/home/header.php',
                  
-                    'footer_invisible':true,
+                    'footer_invisible':false,
                     'footer_page': 'layout_content/home/footer.php',
                     
-                    'left_invisible': true,
+                    'left_invisible': false,
                     'left_page': 'layout_content/home/left.php',
                     
-                    'right_invisible': true,
+                    'right_invisible': false,
                     'right_page': 'layout_content/home/right.php',                    
                     
                     // 'wWidth': wWidth-5,  // minus size * 2 resizer left and right and V scrollbar ???
