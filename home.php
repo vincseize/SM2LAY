@@ -229,9 +229,8 @@ $(".ui-layout-west").click(function(){
 <?php include('navbar.php'); ?>
 
 
-
 <!-- GENERAL TEMPLATE LAYOUT -->
-<div id="menu-north"  class="ui-layout-north" style="background-color:#444444;"><?php include('menu_top_home.php'); ?></div>
+<div id="menu-north"  class="ui-layout-north" style="background-color:#444444;"><?php include('menus/home/menu_top_home.php'); ?></div>
 <div id="menu-west"  class="ui-layout-west"   style="background-image: url('tmp/bg_menu_left.jpg');background-repeat: no-repeat;background-size: cover;"></div>
 <div id="menu-east"  class="ui-layout-east"   style="background-image: url('tmp/bg_admin_right.jpg');background-repeat: no-repeat;background-size: cover;"></div>
 <div id="menu-south"  class="ui-layout-south" style="background-color:#111;"><font color='white'>South (MESSAGES, AUTRES ...), contenu changeant</font></div>
@@ -239,17 +238,8 @@ $(".ui-layout-west").click(function(){
 <!-- CONTENT CONTAINER -->
 <div id="content" class="ui-layout-center center" style="padding:0;margin:0;size:auto;overflow:hidden;width:auto;">
     
-    
-    <div id="inner-content" class="ui-layout-center content" style="padding:0;margin:0;size:auto;overflow:hidden;width:auto;">    </div>
+        <div id="inner-content" class="ui-layout-center content" style="padding:0;margin:0;size:auto;overflow:hidden;width:auto;">    </div>
    
-        
-        
-        
-        
-        
-        
-
-    
  <div>
     
 

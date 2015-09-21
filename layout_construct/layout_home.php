@@ -16,7 +16,7 @@
 
 
 
-/*  TEMPLATE UI
+/*  TEMPLATE UI HOME
 
 
 ------------------------------------------------------------------
@@ -75,7 +75,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                //height:350,
                 // width:1024,
                 width:<?php echo $wWidth ?>,
-               height:<?php echo $hHeight ?>,
+               // height:<?php echo $hHeight ?>,
                rows:[
 
                   
@@ -107,7 +107,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             id:'left',
                             template:'left',
                             hidden:<?php echo $left_invisible ?>,
-                            height:150
+                            // height:150
                             }
                             ,
                     
@@ -124,6 +124,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
                         // DEFAULT DONT TOUCH, MINIMAL CONTENT
                                {
+                                   id:'home_inner_content',
                             // template:'inner content',
                             template:'http->layout_content/home.php',
                             }
@@ -145,7 +146,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             id:'right',
                             template:'right',
                             hidden:<?php echo $right_invisible ?>,
-                            height:150
+                            //height:150
                             }
                             ,
                     

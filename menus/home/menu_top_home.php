@@ -55,12 +55,44 @@ function menu_project(project){
 
 
 </script>
-
 PROJECTS > 
+<style>
+.menu_top_home {
+    /* font-style: italic; */
+     background-color: transparent;
+     background: none;
+     border: none;
+     margin: 0;
+     padding:0;
+}
+</style>
+<div id="menu_top_home"></div>
 
-<font color='#0972A4'>DEMO | 
+<script type="text/javascript" charset="utf-8">
+	var  menu = {
+                        
+			view:"menu",
+			data:[
+				{ id:"1",value:"DEMO"},
+				{ id:"2",value:"GROUMPF", },
+				{ id:"3",value:"MARCEL ET LA LUNE" },
+                                { id:"4",value:"+" }
+			]
+		};
 
-<b><a href='#' onclick='menu_project("groumpf");'>GROUMPF</a></b>
+	webix.ui({
+            container:"menu_top_home",
+            css:"menu_top_home",
+		type:"clean", rows:[
+			{ type:"line", rows:[
+				webix.copy(menu),
+				{ view:"template" }
+			]}
+		]
+	})
+</script>
 
 
-| MARCEL ET LA LUNE | + </font>
+
+
+
