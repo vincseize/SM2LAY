@@ -55,6 +55,29 @@
         var hHeight = document.body.clientHeight;
         
         
+        
+        
+        
+        
+        
+
+                // load default content
+
+                $( "#menu-west" ).load( "menus/general/left.php" );
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         var layoutOptions = {
 	
 	
@@ -190,6 +213,9 @@ $(".ui-layout-west").click(function(){
                 
                 
                 
+
+
+                
 		
 		$("#inner-content").load('layout_construct/home/layout_home.php',
                 {
@@ -241,7 +267,8 @@ $(".ui-layout-west").click(function(){
 
 <!-- GENERAL TEMPLATE LAYOUT -->
 <div id="menu-north"  class="ui-layout-north" style="background-color:#444444;"><?php include('menus/home/menu_top_home.php'); ?></div>
-<div id="menu-west"  class="ui-layout-west"   style="background-image: url('tmp/bg_menu_left.jpg');background-repeat: no-repeat;background-size: cover;"></div>
+<!--<div id="menu-west"  class="ui-layout-west"   style="background-image: url('tmp/bg_menu_left.jpg');background-repeat: no-repeat;background-size: cover;"></div>-->
+<div id="menu-west"  class="ui-layout-west"   style="background-repeat: no-repeat;background-size: cover;"></div>
 <div id="menu-east"  class="ui-layout-east"   style="background-image: url('tmp/bg_admin_right.jpg');background-repeat: no-repeat;background-size: cover;"></div>
 <div id="menu-south"  class="ui-layout-south" style="background-color:#111;"><font color='white'>South (MESSAGES, AUTRES ...), contenu changeant</font></div>
 
