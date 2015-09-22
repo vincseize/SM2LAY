@@ -91,7 +91,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
 
                             {
-                            id:'home_header',
+                            id:'header',
                             // template:'header',
                             template:'http-><?php echo $header_page ?>',
                             hidden:<?php echo $header_invisible ?>,
@@ -100,7 +100,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             ,
                     
                             {
-                            id:'home_header_resizer',
+                            id:'header_resizer',
                             hidden:true,
                             view:'resizer',
                             }
@@ -114,7 +114,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                    {cols:[
                            
                             {
-                            id:'home_left',
+                            id:'left',
                             // template:'left',
                             template:'http-><?php echo $left_page ?>',
                             hidden:<?php echo $left_invisible ?>,
@@ -123,7 +123,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             ,
                     
                             {
-                            id:'home_left_resizer',
+                            id:'left_resizer',
                             hidden:true,
                             view:'resizer',
                            }
@@ -135,7 +135,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
                             // DEFAULT DONT TOUCH, MINIMAL CONTENT OBLIGATOIRE
                             {
-                            id:'home_content',
+                            id:'content',
                             // template:'inner content',
                             template:'http-><?php echo $content_page ?>',
                             }
@@ -144,7 +144,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
                             
                             {
-                            id:'home_right_resizer',
+                            id:'right_resizer',
                             view:'resizer',
                             hidden:true
                             }
@@ -152,7 +152,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             
                             
                             {
-                            id:'home_right',
+                            id:'right',
                             // template:'right',
                             template:'http-><?php echo $right_page ?>',
                             hidden:<?php echo $right_invisible ?>,
@@ -179,7 +179,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
 
                             
                             {
-                            id:'home_footer_resizer',
+                            id:'footer_resizer',
                             view:'resizer',
                             hidden:false
                             }
@@ -187,7 +187,7 @@ $hHeightFooter = $_POST['hHeightFooter'];
                             
                             
                             {
-                            id:'home_footer',
+                            id:'footer',
                             //template:'footer',
                             template:'http-><?php echo $footer_page ?>',
                             hidden:<?php echo $footer_invisible ?>,

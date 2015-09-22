@@ -55,9 +55,9 @@ function menu_project(project){
 
 
 </script>
-PROJECTS > 
+
 <style>
-.menu_top_home {
+.header {
     /* font-style: italic; */
      background-color: transparent;
      background: none;
@@ -66,14 +66,14 @@ PROJECTS >
      padding:0;
 }
 </style>
-<div id="menu_top_home"></div>
+<div id="header"></div>
 
 <script type="text/javascript" charset="utf-8">
 	var  menu = {
                         
 			view:"menu",
 			data:[
-				{ id:"1",value:"DEMO"},
+				{ id:"1",value:"DEMO PROJET"},
 				{ id:"2",value:"GROUMPF", },
 				{ id:"3",value:"MARCEL ET LA LUNE" },
                                 { id:"4",value:"+" }
@@ -90,8 +90,8 @@ PROJECTS >
 		};
 
 	webix.ui({
-            container:"menu_top_home",
-            css:"menu_top_home",
+            container:"header",
+            css:"header",
 		type:"clean", rows:[
 			{ type:"line", rows:[
 				webix.copy(menu),
