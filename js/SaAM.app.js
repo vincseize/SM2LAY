@@ -91,4 +91,18 @@ $(function(){
 			maxSize:				"50%"
 		}
 	});
+	// CENTER INNER RIGHT LAYOUT
+	$("body > .ui-layout-center > .ui-layout-center > .ui-layout-center").layout({
+		defaults: {
+			fxName:					"none",
+			spacing_open:			3,
+			spacing_closed:			15,
+			resizable:				true,
+			closable:				true
+		},
+		north: {			// Inner Top view
+			minSize:				180,
+			maxSize:				"50%"
+		}
+	});
 });

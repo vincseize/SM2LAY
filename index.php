@@ -31,12 +31,15 @@
 	</section>
 
 	<section class="ui-layout-center noBg shadowed roundBorder">
-		<div class="ui-layout-north  noBg"><?php include('./templates/projects_tab.php'); ?></div>
+		<div class="ui-layout-north  noBg">		<?php include('./templates/projects_tab.php'); ?></div>
 		<div class="ui-layout-center">
-			<div class="ui-layout-north"> <?php @include('./templates/panel_center/departments.php'); ?></div>
-			<div class="ui-layout-west">  <?php @include('./templates/panel_center/dailies/dailies_summary.php'); ?></div>
-			<div class="ui-layout-center"><?php @include('./templates/panel_center/dailies/dailies_list.php'); ?></div>
-			<div class="ui-layout-south"> <?php @include('./templates/panel_center/dailies/dailies_notifications.php'); ?></div>
+			<div class="ui-layout-north">		<?php @include('./templates/panel_center/departments.php'); ?></div>
+			<div class="ui-layout-west">		<?php @include('./templates/panel_center/dailies/dailies_summary.php'); ?></div>
+			<div class="ui-layout-center">
+				<div class="ui-layout-north">	<?php @include('./templates/panel_center/dailies/dailies_header.php'); ?></div>
+				<div class="ui-layout-center">	<?php @include('./templates/panel_center/dailies/dailies_list.php'); ?></div>
+			</div>
+			<div class="ui-layout-south">		<?php @include('./templates/panel_center/console.php'); ?></div>
 		</div>
 	</section>
 
