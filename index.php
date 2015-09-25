@@ -20,74 +20,40 @@
 </head>
 <body>
 
-    
-        
-	<section class="ui-layout-north noBg">
+	<section class="ui-layout-north bgBlack">
 		<?php include('./templates/container_general/header_menu.php'); ?>
 	</section>
-    
-    
-    
-    
-	<section class="ui-layout-center noBg shadowed roundBorder">
-            
-                
-            
-		<div class="ui-layout-north noBg">		<?php include('./templates/container_general/projects_tab.php'); ?></div>
-		
-                
-                <div class="ui-layout-center">
-                    
-			<div class="ui-layout-north">		<?php @include('./templates/panel_center/departments.php'); ?></div>
-                        
-                        
-    			<div class="ui-layout-center">
-                            
-                            
-                            <!-- Layout constructor(daylies) -> template (daylies) -->
-                            
-                                <?php @include('./templates/container_inner/daylies/index.php'); ?>
-                            
 
-                                <!-- END Layout constructor(daylies) -> template (daylies) -->
-                        
-                        </div>                    
-    
-                        
-                        
-                        
+	<section class="ui-layout-center noBg shadowed roundBorder">
+		<div class="ui-layout-north noBg">
+			<?php include('./templates/container_general/projects_tab.php'); ?>
 		</div>
-                
-                
-                
+		<div class="ui-layout-center">
+			<div class="ui-layout-north">
+				<?php @include('./templates/panel_center/departments.php'); ?>
+			</div>
+			<div class="ui-layout-center">
+				<!-- Layout constructor(daylies) -> template (daylies) -->
+				<?php @include('./templates/container_inner/daylies/index.php'); ?>
+				<!-- END Layout constructor(daylies) -> template (daylies) -->
+			</div>
+		</div>
 	</section>
 
-    
-    
-
-
-
-    
-    
 	<section class="ui-layout-west noBg text-center">
 		<div class="ui-layout-north noBg inactive"></div>
-		<div class="ui-layout-center noBg pad10">	   <?php include('./templates/container_general/quick_nav.php'); ?></div>
-		<div class="ui-layout-south noBg pad10 bordT"><?php include('./templates/container_general/shortcuts.php'); ?></div>
+		<div class="ui-layout-center noBg pad10">
+			<?php include('./templates/container_general/quick_nav.php'); ?>
+		</div>
+		<div class="ui-layout-south noBg pad10 bordT">
+			<?php include('./templates/container_general/shortcuts.php'); ?>
+		</div>
 	</section>
 
-    
-    
-    
-    
-    
-    
-    	<section class="ui-layout-east   noBg text-center">
-		<div> <?php include('./templates/container_general/panel_admin.php'); ?> </div>
-		
+   	<section class="ui-layout-east   noBg text-center">
+		<?php include('./templates/container_general/panel_admin.php'); ?>
 	</section>
-    
-    
-    
+
 	<section class="ui-layout-south noBg">
 		<?php include('./templates/container_general/messages.php'); ?>
 	</section>

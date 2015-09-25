@@ -90,6 +90,7 @@ sep {
 }
 
 .noBg		{ background: none !important; }
+.bgBlack	{ background-color: #000; }
 
 .floatL		{ float: left; }
 .floatR		{ float: right; }

@@ -1,0 +1,42 @@
+
+Structure des dossiers possible pour la gestion de template
+
+SaAM_v2/
+
+	layouts/
+		home
+		2-cols
+		3-cols
+		4-zones
+		5-zones
+		scenes
+		final
+		...
+
+	modules/
+		home/
+			news
+			...
+		nav/
+			my_trucs
+			arbo
+			tree
+		published/
+			list
+			messages
+		folders/
+			banks
+		assets/
+			list
+			dependances
+			asset_infos
+		scenes/
+			list
+			dependances
+			scene_infos
+			masters
+			assets
+		shots/
+			sequences_list
+			shot_infos
+

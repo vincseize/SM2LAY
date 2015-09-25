@@ -101,12 +101,10 @@ $(function(){
 			closable:				true
 		},
 		north: {			// Inner Top view
-                        spacing_open:                           2,
+			spacing_open:			2,
 			minSize:				22,
-                        maxSize:				22,
-			// maxSize:				"50%",
-                        closable:				false,
-                        resizable:				false,
+			closable:				false,
+			resizable:				false
 		}
 	});
 });
