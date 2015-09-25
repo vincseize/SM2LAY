@@ -21,27 +21,27 @@
 <body>
 
 	<section class="ui-layout-north noBg">
-		<?php include('./templates/header_menu.php') ?>
+		<?php include('./templates/header_menu.php'); ?>
 	</section>
 
 	<section class="ui-layout-west   noBg text-center">
 		<div class="ui-layout-north  noBg inactive"></div>
-		<div class="ui-layout-center noBg pad10">	   <?php include('./templates/panel_left/quick_nav.php') ?></div>
-		<div class="ui-layout-south	 noBg pad10 bordT"><?php include('./templates/panel_left/shortcuts.php') ?></div>
+		<div class="ui-layout-center noBg pad10">	   <?php include('./templates/panel_left/quick_nav.php'); ?></div>
+		<div class="ui-layout-south	 noBg pad10 bordT"><?php include('./templates/panel_left/shortcuts.php'); ?></div>
 	</section>
 
 	<section class="ui-layout-center noBg shadowed roundBorder">
-		<div class="ui-layout-north  noBg"><?php include('./templates/projects_tab.php') ?></div>
+		<div class="ui-layout-north  noBg"><?php include('./templates/projects_tab.php'); ?></div>
 		<div class="ui-layout-center">
-			<div class="ui-layout-north"> <?php @include('./templates/panel_center/departments.php') ?></div>
-			<div class="ui-layout-west">  <?php @include('./templates/panel_center/dailies_summary.php') ?></div>
-			<div class="ui-layout-center"><?php @include('./templates/panel_center/dailies_list.php') ?></div>
-			<div class="ui-layout-south"> <?php @include('./templates/panel_center/dailies_notifications.php') ?></div>
+			<div class="ui-layout-north"> <?php @include('./templates/panel_center/departments.php'); ?></div>
+			<div class="ui-layout-west">  <?php @include('./templates/panel_center/dailies/dailies_summary.php'); ?></div>
+			<div class="ui-layout-center"><?php @include('./templates/panel_center/dailies/dailies_list.php'); ?></div>
+			<div class="ui-layout-south"> <?php @include('./templates/panel_center/dailies/dailies_notifications.php'); ?></div>
 		</div>
 	</section>
 
 	<section class="ui-layout-south noBg">
-		<?php include('./templates/panel_bottom/messages.php') ?>
+		<?php include('./templates/panel_bottom/messages.php'); ?>
 	</section>
 
 </body>

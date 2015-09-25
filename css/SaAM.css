@@ -4,6 +4,7 @@ body {
 	font-size: 100%;
 	background-color: #222;
 	color: #AAA;
+	cursor: default;
 }
 :focus { outline: none; }
 ::-moz-focus-inner { border: 0; }
@@ -27,7 +28,7 @@ header {
 	cursor: pointer;
 	margin: 0;
 	padding: 3px 5px;
-	border-radius: 4px;
+	/*border-radius: 4px;*/
 }
 .tabstyle button {
 	border-radius: 6px 6px 0 0;
@@ -54,7 +55,7 @@ button:hover, li:hover {
 .active {
 	background-color: #2682AF !important;
 	border-color: #38C0FF !important;
-	box-shadow: 0 0 4px #38C0FF;
+	box-shadow: 0 0 2px #38C0FF;
 	color: #FFF;
 }
 .inactive {
@@ -68,12 +69,18 @@ button:hover, li:hover {
 }
 
 select {
-	background-color: #333;
-	border: 1px solid #111;
+	display: inline-block;
 	color: #BBB;
 	cursor: pointer;
-	padding: 2px 5px;
+	padding: 3px 5px;
 	font-size: inherit;
+	font-weight: bold;
+	border: none;
+    box-shadow: none;
+    background: #222 url("../img/arrowdown.gif") no-repeat 90% 50%;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
 
 sep {

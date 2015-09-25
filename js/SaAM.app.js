@@ -18,23 +18,23 @@ $(function(){
 			spacing_closed:			10,
 			slidable:				false
 		},
-		north: {
+		north: {			// Main top menu
 			spacing_open:			6,
 			closable:				false
 		},
-		south: {
+		west: {				// Left panel
+			initClosed:				false
+		},
+		south: {			// Messages
 			minSize:				100,
 			maxSize:				200,
 			spacing_open:			8,
 			closable:				true,
 			resizable:				true,
 			initClosed:				true
-		},
-		west: {
-			initClosed:				false
 		}
 	});
-	// RIGHT PANEL LAYOUT
+	// LEFT PANEL LAYOUT
 	$("body > .ui-layout-west").layout({
 		defaults: {
 			fxName:					"none",
@@ -42,12 +42,12 @@ $(function(){
 			resizable:				true,
 			closable:				false
 		},
-		north: {
+		north: {			// Menu arbo
 			minSize:				25,
 			spacing_open:			0,
 			resizable:				false
 		},
-		south: {
+		south: {			// My trucs
 			minSize:				"60%",
 			resizable:				false
 		}
@@ -55,11 +55,12 @@ $(function(){
 	// CENTER CONTAINER LAYOUT
 	$("body > .ui-layout-center").layout({
 		defaults: {
+			fxName:					"none",
 			spacing_open:			1,
 			resizable:				false,
 			closable:				false
 		},
-		north: {
+		north: {			// Projects
 			minSize:				25,
 			spacing_open:			0
 		}
@@ -68,21 +69,26 @@ $(function(){
 	$("body > .ui-layout-center > .ui-layout-center").layout({
 		defaults: {
 			fxName:					"none",
-			spacing_open:			2,
-			spacing_closed:			20,
+			spacing_open:			3,
+			spacing_closed:			15,
 			resizable:				true,
 			closable:				true
 		},
-		north: {
-			minSize:				20,
+		north: {			// Departments
+			minSize:				24,
 			spacing_closed:			10,
-			resizable:				false
+			spacing_open:			2,
+			resizable:				false,
+			closable:				false
 		},
-		west: {
-			minSize:				"30%"
+		west: {				// Inner left view
+			size:					"30%",
+			minSize:				"15%",
+			maxSize:				"45%"
 		},
-		south: {
-			minSize:				100
+		south: {			// Inner bottom view
+			minSize:				100,
+			maxSize:				"50%"
 		}
 	});
 });

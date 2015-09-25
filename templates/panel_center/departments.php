@@ -1,25 +1,25 @@
 
 <div class="floatR padR10">
 	<ul class="menu petit">
-		<li class="roundFlat">FINAL</li>
+		<li>FINAL</li>
 	</ul>
 </div>
 
-<select class="roundFlat petit">
+<select class="petit">
 	<option>MAIN</option>
-	<option>SHOTS</option>
+	<option>SEQ. & SHOTS</option>
 	<option>ASSETS</option>
 	<option>SCENES</option>
 	<option>TASKS</option>
 </select>
 
 <ul class="menu petit">
-	<li class="roundFlat">CONFIG</li>
+	<li>CONFIG</li>
 	<sep></sep>
-	<li class="roundFlat">OVERVIEW</li>
-	<li class="roundFlat">PROD</li>
+	<li>OVERVIEW</li>
+	<li>PROD</li>
 	<sep></sep>
-	<li class="roundFlat active">DAILIES</li>
-	<li class="roundFlat">SCHEDULE</li>
-	<li class="roundFlat">BANK</li>
+	<li class="active">DAILIES</li>
+	<li>SCHEDULE</li>
+	<li>BANK</li>
 </ul>
