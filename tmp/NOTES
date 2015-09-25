@@ -4,14 +4,21 @@ Structure des dossiers possible pour la gestion de template
 SaAM_v2/
 
 	layouts/
-		home
-		2-cols
-		3-cols
-		4-zones
-		5-zones
-		scenes
-		final
-		...
+		default/
+			'home'
+			2-cols
+			3-cols
+			4-zones
+			5-zones
+			scenes
+			final
+			...
+
+		storyboard/
+
+		son/
+
+
 
 	modules/
 		home/
