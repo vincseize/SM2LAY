@@ -50,7 +50,7 @@
  *	RESIZER-BARS
  */
 .ui-layout-resizer	{ /* all 'resizer-bars' */
-	background:	#222;
+	background:	#000;
 	}
 	.ui-layout-resizer-drag {		/* REAL resizer while resize in progress */
 	}
@@ -71,7 +71,7 @@
 		border-width: 0 1px;
 	}
 	.ui-layout-resizer-dragging-limit {	/* CLONED resizer at min or max size-limit */
-		background: #561313; /* red */
+		background: #561313 !important; /* red */
 	}
 	.ui-layout-resizer-closed-hover	{ /* hover-color to 'slide open' */
 		background: #222;

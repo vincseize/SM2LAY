@@ -2,7 +2,7 @@
 body {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 100%;
-	background-color: #222;
+	background-color: #000;
 	color: #AAA;
 	cursor: default;
 }
@@ -91,6 +91,9 @@ sep {
 
 .noBg		{ background: none !important; }
 .bgBlack	{ background-color: #000; }
+.bgGrey2	{ background-color: #222; }
+.bgGrey3	{ background-color: #333; }
+.bgGrey4	{ background-color: #444; }
 
 .floatL		{ float: left; }
 .floatR		{ float: right; }
@@ -102,6 +105,9 @@ sep {
 .padV10 { padding: 0 10px; }
 .padH10 { padding: 10px 0; }
 .pad10	{ padding: 10px; }
+
+.mL10	{ margin-left: 10px; }
+.mR10	{ margin-right: 10px; }
 
 .text-center { text-align: center; }
 .text-left	 { text-align: left; }
@@ -119,4 +125,12 @@ sep {
 .noBorder	{ border: none !important; }
 .bordT		{ border-top: 1px solid #111; }
 
-//************************//
+
+/**************************/
+
+#main_inner .ui-layout-resizer {
+	background-color: #222;
+}
+#main_inner .ui-layout-toggler {
+	background-color: #959595;
+}

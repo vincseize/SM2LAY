@@ -20,42 +20,47 @@
 </head>
 <body>
 
-	<section class="ui-layout-north bgBlack">
-		<?php include('./templates/container_general/header_menu.php'); ?>
+	<section class="ui-layout-north noBg" id="main_menu">
+		<?php include('./modules/menus/main_menu.php'); ?>
 	</section>
 
-	<section class="ui-layout-center noBg shadowed roundBorder">
-		<div class="ui-layout-north noBg">
-			<?php include('./templates/container_general/projects_tab.php'); ?>
+	<section class="ui-layout-center noBg" id="body_outer">
+		<div class="ui-layout-north noBg text-center" id="projects_tabs">
+			<?php include('./modules/menus/projects_tab.php'); ?>
 		</div>
-		<div class="ui-layout-center">
-			<div class="ui-layout-north">
-				<?php @include('./templates/panel_center/departments.php'); ?>
+		<div class="ui-layout-center noBg" id="body_inner">
+			<div class="ui-layout-north bgGrey4" id="departments">
+				<?php include('./modules/menus/departments.php'); ?>
 			</div>
-			<div class="ui-layout-center">
-				<!-- Layout constructor(daylies) -> template (daylies) -->
-				<?php @include('./templates/container_inner/daylies/index.php'); ?>
-				<!-- END Layout constructor(daylies) -> template (daylies) -->
+			<div class="ui-layout-center bgGrey2" id="main_outer">
+				<div class="ui-layout-center" id="main_inner">
+					<?php include('./layouts/5-zones.php'); ?>
+				</div>
+				<div class="ui-layout-west noBg text-center" id="panel_nav">
+					<div class="ui-layout-center noBg pad10">
+						<?php include('./modules/nav/quick_nav.php'); ?>
+					</div>
+					<div class="ui-layout-south noBg pad10 bordT">
+						<?php include('./modules/nav/shortcuts.php'); ?>
+					</div>
+				</div>
+				<div class="ui-layout-east noBg text-center" id="panel_admin">
+					<div class="ui-layout-north noBg pad10">
+						<img src="tmp/bg_admin.png">
+					</div>
+					<div class="ui-layout-center noBg pad10">
+						<button>Feedback here if not Demo SaAM</button>
+						<br />
+						<br />
+						<button>Templates</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="ui-layout-west noBg text-center">
-		<div class="ui-layout-north noBg inactive"></div>
-		<div class="ui-layout-center noBg pad10">
-			<?php include('./templates/container_general/quick_nav.php'); ?>
-		</div>
-		<div class="ui-layout-south noBg pad10 bordT">
-			<?php include('./templates/container_general/shortcuts.php'); ?>
-		</div>
-	</section>
-
-   	<section class="ui-layout-east   noBg text-center">
-		<?php include('./templates/container_general/panel_admin.php'); ?>
-	</section>
-
-	<section class="ui-layout-south noBg">
-		<?php include('./templates/container_general/messages.php'); ?>
+	<section class="ui-layout-south noBg" id="bottom_panel">
+		<?php include('./modules/nav/messages.php'); ?>
 	</section>
 
 </body>
