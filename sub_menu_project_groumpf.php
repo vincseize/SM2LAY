@@ -1,1 +1,0 @@
-	<font color='white'>SEQ SHOT DEROULANT </font><font color='grey'>| ADMINISTRATION | BLOCKANIM ANIM LIGHTING ... | </font>

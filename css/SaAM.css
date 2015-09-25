@@ -1,0 +1,114 @@
+
+body {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	background-color: #222;
+	color: #AAA;
+}
+:focus { outline: none; }
+::-moz-focus-inner { border: 0; }
+
+header {
+	padding: 0 0 2px 0;
+	margin: 0;
+	font-size: 0.9em;
+	border-bottom: 1px solid #333;
+}
+
+.menu {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	display: inline-block;
+	list-style: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 3px 5px;
+	border-radius: 4px;
+}
+.tabstyle button {
+	border-radius: 6px 6px 0 0;
+	border-bottom: none;
+	margin-right: -2px;
+	font-size: 0.9em;
+}
+
+button {
+	display: inline-block;
+	background-color: #333;
+	border: 1px solid #111;
+	color: #BBB;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 3px 5px;
+	font-size: inherit;
+}
+button:hover, li:hover {
+	background-color: #244E61;
+	border-color: #2682AF;
+	color: #FFF;
+}
+.active {
+	background-color: #2682AF !important;
+	border-color: #38C0FF !important;
+	box-shadow: 0 0 4px #38C0FF;
+	color: #FFF;
+}
+.inactive {
+	color: #888;
+}
+.inactive:hover {
+	background-color: inherit;
+	border-color: inherit;
+	color: #888;
+	cursor: default;
+}
+
+select {
+	background-color: #333;
+	border: 1px solid #111;
+	color: #BBB;
+	cursor: pointer;
+	padding: 2px 5px;
+	font-size: inherit;
+}
+
+sep {
+	border-left: 1px solid #777;
+	margin: 0 10px 0 7px;
+	box-shadow: 0 0 3px #999;
+}
+
+.noBg		{ background: none !important; }
+
+.floatL		{ float: left; }
+.floatR		{ float: right; }
+
+.padL10 { padding-left: 10px; }
+.padR10 { padding-right: 10px; }
+.padT10 { padding-top: 10px; }
+.padB10 { padding-bottom: 10px; }
+.padV10 { padding: 0 10px; }
+.padH10 { padding: 10px 0; }
+.pad10	{ padding: 10px; }
+
+.text-center { text-align: center; }
+.text-left	 { text-align: left; }
+.text-right	 { text-align: right; }
+
+.petit	{ font-size: 0.9em; }
+.mini	{ font-size: 0.8em; }
+
+.shadowed		{ box-shadow: 0 5px 5px #000 !important; z-index: 100 !important; }
+.roundBorder	{ border-radius: 5px; }
+.roundBorderT	{ border-radius: 5px 5px 0 0; }
+.roundBorderB	{ border-radius: 0 0 5px 5px; }
+.roundFlat		{ border-radius: 0 !important; }
+
+.noBorder	{ border: none !important; }
+.bordT		{ border-top: 1px solid #111; }
+
+//************************//
