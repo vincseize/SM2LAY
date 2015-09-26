@@ -16,6 +16,13 @@
 
 	<link rel="stylesheet" href="css/SaAM.css" type="text/css" />
 	<script src="js/SaAM.app.js"></script>
+	
+	
+	<!-- https://www.jstree.com/ -->
+	<script src="js/jstree/dist/jstree.min.js"></script>
+	<link rel="stylesheet" href="js/jstree/dist/themes/default/style.min.css" />
+
+
 
 </head>
 <body>
@@ -25,7 +32,7 @@
 	</section>
 
 	<section class="ui-layout-center noBg" id="body_outer">
-		<div class="ui-layout-north noBg text-center" id="projects_tabs">
+		<div class="ui-layout-north noBg text-left" id="projects_tabs">
 			<?php include('./modules/menus/projects_tab.php'); ?>
 		</div>
 		<div class="ui-layout-center noBg" id="body_inner">

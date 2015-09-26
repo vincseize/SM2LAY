@@ -11,9 +11,11 @@
 	</div>
 	<a href="./"><button><i class="fa fa-refresh"></i></button></a>
 	<ul class="menu padL10">
-		<li><i class="fa fa-cogs"></i> Preferences</li>
+		<li> HOME</li>
 		<sep></sep>
 		<li><i class="fa fa-wrench"></i> ADMIN</li>
+		<sep></sep>
+		<li><i class="fa fa-cogs"></i> Preferences</li>
 		<sep></sep>
 		<li><i class="fa fa-question-circle"></i> Help</li>
 		<li><i class="fa fa-graduation-cap"></i> Tutorials</li>

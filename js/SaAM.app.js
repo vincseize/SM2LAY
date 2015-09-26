@@ -69,7 +69,8 @@ $(function(){
 			closable:				true
 		},
 		west: {						// Navigation panel
-			minSize:				200
+			minSize:				250,
+			resizable:				true,
 		},
 		east: {						// Admin panel
 			minSize:				200
