@@ -5,12 +5,13 @@
 	</ul>
 </div>
 
-<select class="petit">
-	<option>MAIN</option>
+<select class="w250 petit">
+	<option>PROJECT MAIN SECTION</option>
 	<option>SEQ. & SHOTS</option>
 	<option>ASSETS</option>
 	<option>SCENES</option>
 	<option>TASKS</option>
+	<option disabled>---</option>
 </select>
 
 <ul class="menu petit">

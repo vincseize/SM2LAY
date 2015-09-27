@@ -72,7 +72,7 @@ select {
 	display: inline-block;
 	color: #BBB;
 	cursor: pointer;
-	padding: 3px 5px;
+	padding: 3px 10px;
 	font-size: inherit;
 	font-weight: bold;
 	border: none;
@@ -125,6 +125,8 @@ sep {
 .noBorder	{ border: none !important; }
 .bordT		{ border-top: 1px solid #111; }
 
+.w200	{ width: 200px; }
+.w250	{ width: 258px; }
 
 /**************************/
 

@@ -4,7 +4,7 @@
 /**
  * SaAM APPLICATION DECLARATION
  */
-var saam = angular.module('saam', []);
+var saam = angular.module('saam', ['ui.tree']);
 
 /**
  * LAYOUT DEFINITION
@@ -13,7 +13,7 @@ $(function(){
 	// SaAM LAYOUT
 	$('body').layout({
 		north: {					// Main top menu
-			spacing_open:			6
+			spacing_open:			0
 		},
 		defaults: {					// body outer view
 			fxName:					"none",
@@ -35,7 +35,7 @@ $(function(){
 	$("#body_outer").layout({
 		north: {					// Projects tabs
 			minSize:				25,
-			spacing_open:			0
+			spacing_open:			1
 		},
 		defaults: {					// Body inner view
 			fxName:					"none",
@@ -70,7 +70,8 @@ $(function(){
 		},
 		west: {						// Navigation panel
 			minSize:				250,
-			resizable:				true,
+			maxSize:				"50%",
+			resizable:				true
 		},
 		east: {						// Admin panel
 			minSize:				200
