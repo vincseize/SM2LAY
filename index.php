@@ -9,18 +9,16 @@
 	<link rel="stylesheet" href="css/vendor/jquery-ui.min.css" type="text/css" />
 	<link rel="stylesheet" href="css/vendor/jquery.layout-default-1.4.0.css" type="text/css" />
 	<link rel="stylesheet" href="css/vendor/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/vendor/angular-ui-tree.css" type="text/css" />
 
 	<script src="js/vendor/angular-1.4.6.min.js"></script>
 	<script src="js/vendor/jquery-2.1.4.min.js"></script>
 	<script src="js/vendor/jquery-ui.min.js"></script>
 	<script src="js/vendor/jquery.layout-1.4.0.js"></script>
+	<script src="js/vendor/angular-ui-tree.min.js"></script>	<!-- https://github.com/angular-ui-tree/angular-ui-tree -->
 
 	<link rel="stylesheet" href="css/SaAM.css" type="text/css" />
 	<script src="js/SaAM.app.js"></script>
-
-	<!-- https://www.jstree.com/ -->
-	<script src="js/jstree/dist/jstree.min.js"></script>
-	<link rel="stylesheet" href="js/jstree/dist/themes/default/style.min.css" />
 
 </head>
 <body>

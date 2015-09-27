@@ -1,67 +1,67 @@
-<!-- https://jqueryui.com/resizable/  -->    
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="../../js/vendor/jquery-2.1.4.min.js"></script>
-  <!--
-  <script src="../../js/vendor/jquery.layout-1.4.0.js"></script>
-   --> 
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  
-
-
-
 <script>
-  $(function() {
-    $( "#menu_quick_nav_resizable1" ).resizable();
-	$( "#menu_quick_nav_resizable2" ).resizable();
-  });
-  </script>
 
+saam.controller('menuArboCtrl', function($scope){
+	$scope.list = [
+		{
+			"id": 1,
+			"title": "1. dragon-breath",
+			"items": []
+		},
+		{
+			"id": 2,
+			"title": "2. moiré-vision",
+			"items": [
+				{
+					"id": 21,
+					"title": "2.1. tofu-animation",
+					"items": [
+						{
+							"id": 211,
+							"title": "2.1.1. spooky-giraffe",
+							"items": []
+						},
+						{
+							"id": 212,
+							"title": "2.1.2. bubble-burst",
+							"items": []
+						}
+					]
+				},
+				{
+					"id": 22,
+					"title": "2.2. barehand-atomsplitting",
+					"items": []
+				}
+			]
+		},
+		{
+			"id": 3,
+			"title": "3. unicorn-zapper",
+			"items": []
+		},
+		{
+			"id": 4,
+			"title": "4. romantic-transclusion",
+			"items": []
+		}
+	];
+});
 
-<div id="menu_quick_nav_resizable1" style="background-color:#111;width:200px;height:300px;">
-    <h3 style="background-color:#006292;">MENU ARBO Home</h3>
-
-			<div id="menu_home" class="demo">
-				<ul>
-					<li>rand tip </li>
-					<li data-jstree='{ "opened" : true }'>TIPS
-						<ul>
-							<li>t 1</li>
-							<li>t 2</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li data-jstree='{ "opened" : true }'>FIXES
-						<ul>
-							<li>f 1</li>
-							<li>f 2</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-</div>
-
-	
-	<div id="menu_quick_nav_resizable2" style="background-color:#111;width:200px;height:300px;">
-    <h3 style="background-color:#006292;">MENU Project Home</h3>
-
-			<div id="menu_project_home" class="demo">
-				<ul>
-					<li data-jstree='{ "opened" : true }'>SEQUENCES
-						<ul>
-							<li data-jstree='{ "selected" : true }'>Shot 1</li>
-							<li>Shot 2</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-</div>
-  
-<br>
-	
-<script>
-	$('#menu_home').jstree();
-	$('#menu_project_home').jstree();
 </script>
+
+<div ui-tree ng-controller="menuArboCtrl">
+	<ol ui-tree-nodes="" ng-model="list">
+		<li ng-repeat="item in list" ui-tree-node>
+			<div ui-tree-handle>
+				{{item.title}}
+			</div>
+			<ol ui-tree-nodes="" ng-model="item.items">
+				<li ng-repeat="subItem in item.items" ui-tree-node>
+					<div ui-tree-handle>
+						{{subItem.title}}
+					</div>
+				</li>
+			</ol>
+		</li>
+	</ol>
+</div>
