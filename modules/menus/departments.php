@@ -5,12 +5,12 @@
 	</ul>
 </div>
 
-<select class="w250 petit">
-	<option>PROJECT MAIN SECTION</option>
-	<option>SEQ. & SHOTS</option>
-	<option>ASSETS</option>
-	<option>SCENES</option>
-	<option>TASKS</option>
+<select class="w250 petit" ng-model="currentLayout">
+	<option ng-value="3">PROJECT MAIN SECTION (5 zones)</option>
+	<option ng-value="2" ng-selected="true">SEQ. & SHOTS (4 zones)</option>
+	<option ng-value="1">ASSETS (3 zones)</option>
+	<option ng-value="3">SCENES (5 zones)</option>
+	<option ng-value="0">TASKS (2 zones)</option>
 	<option disabled>---</option>
 </select>
 

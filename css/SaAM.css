@@ -9,6 +9,11 @@ body {
 :focus { outline: none; }
 ::-moz-focus-inner { border: 0; }
 
+.includer {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+
 header {
 	padding: 0 0 2px 0;
 	margin: 0;

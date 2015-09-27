@@ -13,7 +13,8 @@ $(function(){
 	// SaAM LAYOUT
 	$('body').layout({
 		north: {					// Main top menu
-			spacing_open:			0
+			spacing_open:			0,
+			minSize:				26
 		},
 		defaults: {					// body outer view
 			fxName:					"none",
