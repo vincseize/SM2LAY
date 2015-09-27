@@ -47,7 +47,7 @@ button {
 	padding: 3px 5px;
 	font-size: inherit;
 }
-button:hover, li:hover {
+button:hover, .menu li:hover {
 	background-color: #244E61;
 	border-color: #2682AF;
 	color: #FFF;
@@ -60,6 +60,10 @@ button:hover, li:hover {
 }
 .inactive {
 	color: #888;
+}
+.disabled {
+	color: #555;
+	cursor: default !important;
 }
 .inactive:hover {
 	background-color: inherit;
@@ -89,6 +93,18 @@ sep {
 	box-shadow: 0 0 3px #999;
 }
 
+.treeMenu * {
+	white-space: nowrap;
+}
+
+/******************************************************************************/
+
+.inline			{ display: inline-block; }
+.hide, .hidden	{ display: none; }
+
+.doigt		{ cursor: pointer; }
+.curMove	{ cursor: move; }
+
 .noBg		{ background: none !important; }
 .bgBlack	{ background-color: #000; }
 .bgGrey2	{ background-color: #222; }
@@ -97,6 +113,7 @@ sep {
 
 .floatL		{ float: left; }
 .floatR		{ float: right; }
+.fixFloat	{ clear: both; }
 
 .padL10 { padding-left: 10px; }
 .padR10 { padding-right: 10px; }
@@ -125,10 +142,14 @@ sep {
 .noBorder	{ border: none !important; }
 .bordT		{ border-top: 1px solid #111; }
 
+.w10	{ width: 10px; }
+.w15	{ width: 15px; }
+.w20	{ width: 20px; }
+.w30	{ width: 30px; }
 .w200	{ width: 200px; }
 .w250	{ width: 258px; }
 
-/**************************/
+/******************************************************************************/
 
 #main_inner .ui-layout-resizer {
 	background-color: #222;
