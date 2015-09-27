@@ -49,19 +49,21 @@ saam.controller('menuArboCtrl', function($scope){
 
 </script>
 
-<div ui-tree ng-controller="menuArboCtrl">
-	<ol ui-tree-nodes="" ng-model="list">
-		<li ng-repeat="item in list" ui-tree-node>
-			<div ui-tree-handle>
-				{{item.title}}
-			</div>
-			<ol ui-tree-nodes="" ng-model="item.items">
-				<li ng-repeat="subItem in item.items" ui-tree-node>
-					<div ui-tree-handle>
-						{{subItem.title}}
-					</div>
-				</li>
-			</ol>
-		</li>
-	</ol>
+<div  ng-controller="menuArboCtrl">
+	<div ui-tree data-drag-enabled="false">
+		<ol ng-model="list" ui-tree-nodes>
+			<li ng-repeat="item in list" ui-tree-node>
+				<div ui-tree-handle>
+					{{item.title}}
+				</div>
+				<ol ui-tree-nodes="" ng-model="item.items">
+					<li ng-repeat="subItem in item.items" ui-tree-node>
+						<div ui-tree-handle>
+							{{subItem.title}}
+						</div>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</div>
 </div>
