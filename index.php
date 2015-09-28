@@ -23,6 +23,20 @@
 
 	<script src="modules/nav/quick_nav.ctrl.js"></script>		<!-- MODULE : quick navigation (tree & my trucs) -->
 
+	
+	  	<script>
+		$( document ).ready(function() {	
+			$('#create_template').click(function() {
+				$('#projects_tabs').hide();
+				$('#departments').hide();
+				$('#main_outer').load('./templates/template_constructor.php');
+				return false;
+			});
+		});	
+	</script>
+	
+	
+	
 </head>
 <body ng-controller="navLayoutCtrl">
 
@@ -53,7 +67,10 @@
 						<img src="tmp/bg_admin.png">
 					</div>
 					<div class="ui-layout-center noBg pad10">
-	
+						<button>Feedback here if not in Demo SaAM</button>
+						<br />
+						<br />
+						<button id="create_template">Create your Template</button>
 					</div>
 				</div>
 			</div>
