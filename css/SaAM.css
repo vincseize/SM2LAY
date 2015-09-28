@@ -12,6 +12,7 @@ body {
 .includer {
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
+	overflow: hidden;
 }
 
 header {
@@ -102,10 +103,23 @@ sep {
 	white-space: nowrap;
 }
 
+h3 { margin: 10px 0; color: #EEE; }
+strong { color: #EEE; }
+
+.vignette {
+	min-width: 250px;
+	max-height: 150px;
+	border: 1px solid #888;
+}
+
 /******************************************************************************/
 
 .inline			{ display: inline-block; }
 .hide, .hidden	{ display: none; }
+
+.top { vertical-align: top; }
+.mid { vertical-align: middle; }
+.bot { vertical-align: bottom; }
 
 .doigt		{ cursor: pointer; }
 .curMove	{ cursor: move; }
@@ -153,6 +167,10 @@ sep {
 .w30	{ width: 30px; }
 .w200	{ width: 200px; }
 .w250	{ width: 258px; }
+
+.lightest	{ color: #EEE; }
+.lighter	{ color: #DDD; }
+.light		{ color: #CCC; }
 
 /******************************************************************************/
 

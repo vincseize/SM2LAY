@@ -11,7 +11,7 @@ $(function(){
 		},
 		north: {
 			resizable:				false,
-			minSize:				30,
+			minSize:				150,
 			initClosed:				false
 		},
 		west: {
@@ -26,7 +26,9 @@ $(function(){
 </script>
 
 
-<div class="ui-layout-north pad10">	Top submenu</div>
+<div class="ui-layout-north pad10">
+	<div class="includer" ng-include="'./modules/project/min_infos.php'"></div>
+</div>
 
 <div class="ui-layout-center pad10">	content</div>
 
