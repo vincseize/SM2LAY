@@ -53,10 +53,7 @@
 						<img src="tmp/bg_admin.png">
 					</div>
 					<div class="ui-layout-center noBg pad10">
-						<button>Feedback here if not Demo SaAM</button>
-						<br />
-						<br />
-						<button>Templates</button>
+	
 					</div>
 				</div>
 			</div>
