@@ -6,6 +6,8 @@
  */
 var saam = angular.module('saam', ['ui.tree']);
 
+saam.constant('VERSION', '2.0.0');
+
 /**
  * ENABLE POST-BOOTSTRAP PROVIDING ("lazy-load" technique)
  */
@@ -56,8 +58,7 @@ saam.factory('layoutsList', function(){
 			'./layouts/3-zones.php',
 			'./layouts/4-zones.php',
 			'./layouts/5-zones.php'
-		],
-		currentLayout: 0
+		]
 	};
 });
 /**
@@ -66,6 +67,9 @@ saam.factory('layoutsList', function(){
 saam.factory('modulesList', function(){
 	return {
 		modules: {
+			'home': [
+				'./modules/home/home.php'
+			],
 			'menus' : [
 				'./modules/menus/main_menu.php',
 				'./modules/menus/departments.php',
@@ -75,7 +79,51 @@ saam.factory('modulesList', function(){
 				'./modules/nav/quick_nav.php',
 				'./modules/nav/shortcuts.php',
 				'./modules/nav/messages.php'
+			],
+			'project': [
+				'./modules/project/min_infos.php'
 			]
 		}
 	};
+});
+
+
+
+/**
+ * SERVICE de gestion de l'interface (layouts & modules)
+ */
+saam.service('saamUI', function(layoutsList, modulesList){
+
+	var currentUI = {
+		layout: 0,
+		modules: {
+			north: modulesList.modules.project[0],
+			south: modulesList.modules.menus[2],
+			center: modulesList.modules.home[0],
+			east: null,
+			west: modulesList.modules.nav[2]
+		}
+	};
+
+	return {
+		currentUI: currentUI,
+		getCurrentLayout: getCurrentLayout,
+		setCurrentLayout: setCurrentLayout
+	};
+
+	function getCurrentLayout() {
+		return currentUI.layout;
+	}
+
+	function setCurrentLayout(layout) {
+		currentUI.layout = layout;
+	}
+
+});
+
+/**
+ * INNER LAYOUT CONTROLLER
+ */
+saam.controller('innerLayoutCtrl', function($scope, saamUI){
+	$scope.zones = saamUI.currentUI.modules;
 });

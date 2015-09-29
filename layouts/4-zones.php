@@ -32,12 +32,18 @@ $(function(){
 
 
 <div class="ui-layout-north pad10">
-	<div class="includer" ng-include="'./modules/project/min_infos.php'"></div>
+	<div class="includer" ng-include="zones.north"></div>
 </div>
 
-<div class="ui-layout-center pad10">	content</div>
+<div class="ui-layout-center pad10">
+	<div class="includer" ng-include="zones.center"></div>
+</div>
 
-<div class="ui-layout-west pad10">	west</div>
+<div class="ui-layout-west pad10">
+	<div class="includer" ng-include="zones.west"></div>
+</div>
 
-<div class="ui-layout-south pad10">	console</div>
+<div class="ui-layout-south pad10">
+	<div class="includer" ng-include="zones.south"></div>
+</div>
 

@@ -21,7 +21,10 @@ $(function(){
 </script>
 
 
-<div class="ui-layout-center pad10">	content</div>
+<div class="ui-layout-center pad10">
+	<div class="includer" ng-include="zones.center"></div>
+</div>
 
-<div class="ui-layout-west pad10">	west</div>
-
+<div class="ui-layout-west pad10">
+	<div class="includer" ng-include="zones.west"></div>
+</div>

@@ -3,9 +3,9 @@
 /**
  * GLOBAL LAYOUT NAVIGATION CONTROLLER
  */
-saam.controller('navLayoutCtrl', function($scope, layoutsList, modulesList){
+saam.controller('interfaceCtrl', function($scope, layoutsList, modulesList, saamUI){
 	$scope.layouts = layoutsList.layouts;
 	$scope.modules = modulesList.modules;
 
-	$scope.currentLayout = layoutsList.currentLayout;
+	$scope.current = saamUI.currentUI;
 });

@@ -20,10 +20,10 @@
 	<link rel="stylesheet" href="css/SaAM.css" type="text/css" />
 	<script src="js/SaAM.app.js"></script>
 	<script src="js/SaAM.layout.js"></script>
-	<script src="js/navLayout.ctrl.js"></script>				<!-- NAVIGATION controller (layouts and modules) -->
+	<script src="js/interface.ctrl.js"></script>				<!-- NAVIGATION controller (layouts and modules) -->
 
 </head>
-<body ng-controller="navLayoutCtrl">
+<body ng-controller="interfaceCtrl">
 
 	<section class="ui-layout-north noBg" id="body_menu">
 		<div class="includer" ng-include="modules.menus[0]"></div>
@@ -37,7 +37,7 @@
 			</div>
 			<div class="ui-layout-center noBg" id="main_outer">
 				<div class="ui-layout-center">
-					<div class="includer" ng-include="layouts[currentLayout]" id="main_inner"></div>
+					<div class="includer" ng-include="layouts[current.layout]" id="main_inner" ng-controller="innerLayoutCtrl"></div>
 				</div>
 				<div class="ui-layout-west bgGrey2" id="panel_nav">
 					<div class="ui-layout-center noBg">

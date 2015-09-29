@@ -8,7 +8,7 @@
 		</ul>
 	</div>
 
-	<select class="w250 petit" ng-model="currentSection" ng-options="section.layout as section.label for section in sections">
+	<select class="w250 petit" ng-model="current.layout" ng-options="section.layout as section.label for section in sections" ng-change="changeLayout()">
 		<option disabled>---</option>
 	</select>
 
