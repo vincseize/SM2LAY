@@ -19,22 +19,21 @@
 
 	<link rel="stylesheet" href="css/SaAM.css" type="text/css" />
 	<script src="js/SaAM.app.js"></script>
+	<script src="js/SaAM.layout.js"></script>
 	<script src="js/navLayout.ctrl.js"></script>				<!-- NAVIGATION controller (layouts and modules) -->
-
-	<script src="modules/nav/quick_nav.ctrl.js"></script>		<!-- MODULE : quick navigation (tree & my trucs) -->
 
 </head>
 <body ng-controller="navLayoutCtrl">
 
 	<section class="ui-layout-north noBg" id="body_menu">
-		<div class="includer" ng-include="modules.menus[1]"></div>
+		<div class="includer" ng-include="modules.menus[0]"></div>
 	</section>
 
 	<section class="ui-layout-center noBg" id="body_outer">
 		<div class="ui-layout-north bgGrey2"></div>
 		<div class="ui-layout-center noBg" id="body_inner">
 			<div class="ui-layout-north bgGrey4" id="main_top_menu">
-				<?php include('./modules/menus/departments.php'); ?>
+				<div class="includer" ng-include="modules.menus[1]"></div>
 			</div>
 			<div class="ui-layout-center noBg" id="main_outer">
 				<div class="ui-layout-center">
@@ -53,7 +52,7 @@
 						<img src="tmp/bg_admin.png">
 					</div>
 					<div class="ui-layout-center noBg pad10">
-	
+
 					</div>
 				</div>
 			</div>

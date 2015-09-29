@@ -1,4 +1,6 @@
 
+<script src="modules/nav/quick_nav.ctrl.js"></script>
+
 <div class="treeMenu petit pad10" ng-controller="treeMenuCtrl">
 
 	<script type="text/ng-template" id="arboItems">
