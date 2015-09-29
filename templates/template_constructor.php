@@ -12,10 +12,18 @@ $height_layout_resized = 800;
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  
-  
 
+   <!--
+
+  <script src="js/vendor/jquery-2.1.4.min.js"></script>
   
+  
+	<script src="js/vendor/angular-1.4.6.min.js"></script>
+	<script src="js/vendor/jquery-ui.min.js"></script>
+	<script src="js/vendor/jquery.layout-1.4.0.js"></script>
+	<script src="js/vendor/angular-ui-tree.min.js"></script>	
+
+   --> 
 
 
   
@@ -85,7 +93,11 @@ $( document ).ready(function() {
 				$('#main_outer').load('./layouts/5-zones.php');
 				return false;
 			});
-
+			
+			$('#clear_layout').click(function() {
+				window.location.replace( "template_constructor.php" );
+			});
+			
 			$('#create_template_next_step2').click(function() {
 				window.location.replace( "template_constructor2.php" );
 			});
@@ -264,10 +276,11 @@ $( document ).ready(function() {
  
 		<div id="layout_container" class="ui-widget-content ui-state-default">
 			
-		<button id="close_create_template">CLOSE TEMPLATE GENERATOR</button>		
-		<button id="create_template_next_step2">NEXT STEP</button>		
+		<button id="close_create_template">CLOSE TEMPLATE GENERATOR</button>
+		<button id="clear_layout">CLEAR LAYOUT</button>
+		<button id="create_template_next_step2">NEXT STEP >></button>		
 		
-		
+		(Un Layout depend d un projet !!!)
 		
 		  <h4 class="ui-widget-header"> DRAG AND DROP LAYOUT HERE</h4>
 		  

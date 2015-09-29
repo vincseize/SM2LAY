@@ -29,13 +29,14 @@
 			$('#create_template').click(function() {
 				$('#projects_tabs').hide();
 				$('#departments').hide();
-				$('#main_outer').load('./templates/template_constructor.php');
+				$('#body_outer').load('./templates/template_constructor.php');
 				return false;
 			});
 		});	
 	</script>
 	
-	
+
+  
 	
 </head>
 <body ng-controller="navLayoutCtrl">
