@@ -27,10 +27,11 @@
 	  	<script>
 		$( document ).ready(function() {	
 			$('#create_template').click(function() {
-				$('#projects_tabs').hide();
-				$('#departments').hide();
-				$('#body_outer').load('./templates/template_constructor.php');
-				return false;
+				// $('#projects_tabs').hide();
+				// $('#departments').hide();
+				// $('#body_outer').load('./templates/create_template/layout_chooser.php');
+				// return false;
+				window.location.href = './templates/create_template/layout_chooser.php';
 			});
 		});	
 	</script>
@@ -68,10 +69,10 @@
 						<img src="tmp/bg_admin.png">
 					</div>
 					<div class="ui-layout-center noBg pad10">
-						<button>Feedback here if not in Demo SaAM</button>
+						
 						<br />
 						<br />
-						<button id="create_template">Create your Template</button>
+						<button id="create_template">Template Designer</button>
 					</div>
 				</div>
 			</div>

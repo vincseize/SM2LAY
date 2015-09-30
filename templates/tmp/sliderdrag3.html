@@ -1,0 +1,74 @@
+ <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+<style>
+	
+	#origin
+{
+  background-color: green;
+}
+#drop
+{
+  background-color: red;
+  min-height: 120px;
+}
+.list{ min-height: 120px;} /* you need to set the size of the ul otherwise it may not detect the dropped item */
+.list li{
+display: inline-block;
+list-style-type: none;
+padding-right: 20px;
+}
+</style>
+
+
+<script>
+$(document).ready(function($) {	
+	$( "#sort1, #sort2" ).sortable({
+      helper:"clone", 
+      opacity:0.5,
+      cursor:"crosshair",
+      connectWith: ".list",
+      receive: function( event, ui ){
+        if($(ui.sender).attr('id')==='sort1' 
+           && $('#sort2').children('li').length>3){
+          $(ui.sender).sortable('cancel');
+        }
+      }
+});
+
+$( "#sort1,#sort2" ).disableSelection();
+
+
+});
+
+</script>
+
+
+
+
+
+
+
+<div id="wrapper">
+	<div id="origin" class="fbox">
+    <ul id="sort1" class="list">
+      <li>zaaaa</li>
+      <li>zouzoooo</li>
+      <li>444444444444444</li>
+       <li>555555555555555</li>
+      <li>66666666666666666666</li>
+      <li>7777777777777777777</li>
+    </ul>
+	</div>
+  <p>test</p>
+	<div id="drop" class="fbox">
+     <ul id="sort2" class="list">
+       
+     </ul>
+	</div>
+</div>
+
+
+
+

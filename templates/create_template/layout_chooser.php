@@ -88,10 +88,11 @@ $height_layout_resized = 800;
 $( document ).ready(function() {	
 	
 			$('#close_create_template').click(function() {
-				$('#projects_tabs').show();
-				$('#departments').show();
-				$('#main_outer').load('./layouts/5-zones.php');
-				return false;
+				// $('#projects_tabs').show();
+				// $('#departments').show();
+				// $('#main_outer').load('./layouts/5-zones.php');
+				// return false;
+				window.location.replace( "../../index.php" );
 			});
 			
 			$('#clear_layout').click(function() {
@@ -99,7 +100,7 @@ $( document ).ready(function() {
 			});
 			
 			$('#create_template_next_step2').click(function() {
-				window.location.replace( "template_constructor2.php" );
+				window.location.replace( "template_constructor.php" );
 			});
 
 });	

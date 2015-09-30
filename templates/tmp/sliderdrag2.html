@@ -1,0 +1,91 @@
+ <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+<style>
+	
+	#origin
+{
+  background-color: green;
+}
+#drop
+{
+  background-color: red;
+  min-height: 120px;
+}
+.list{ min-height: 120px;} /* you need to set the size of the ul otherwise it may not detect the dropped item */
+.list li{
+display: inline-block;
+list-style-type: none;
+padding-right: 20px;
+}
+</style>
+
+
+<script>
+$(document).ready(function($) {	
+	$( "#sort1, #receipt" ).sortable({
+      helper:"clone", 
+      opacity:0.5,
+      cursor:"crosshair",
+      connectWith: ".list",
+      receive: function( event, ui ){
+        if($(ui.sender).attr('id')==='sort1' 
+           && $('#receipt').children('li').length>3){
+          $(ui.sender).sortable('cancel');
+        }
+      }
+});
+
+$( "#sort1,#receipt" ).disableSelection();
+
+
+});
+
+</script>
+
+
+
+
+
+
+
+<div id="wrapperXXX">
+	
+	
+	
+            <div class="slider js_variablewidth variablewidth">
+                <div class="frame js_frame">
+                    <ul class="slides js_slides"  id='sort1'>
+                        <li class="js_slide" style="width: 220px;">220</li>
+                        <li class="js_slide" style="width: 190px;">190</li>
+                        <li class="js_slide" style="width: 150px;">150</li>
+                        <li class="js_slide" style="width: 130px;">130</li>
+                        <li class="js_slide" style="width: 250px;">250</li>
+                        <li class="js_slide" style="width: 180px;">180</li>
+                        <li class="js_slide" style="width: 200px;">200</li>
+                        <li class="js_slide" style="width: 140px;">140</li>
+                        <li class="js_slide" style="width: 120px;">120</li>
+                        <li class="js_slide" style="width: 240px;">240</li>
+                    </ul>
+                </div>
+	
+	
+	
+	
+	
+	
+  <p>test</p>
+	<div id="drop" class="fbox">
+     <ul id="receipt" class="list">
+       
+     </ul>
+	</div>
+  
+  
+  
+</div>
+
+
+
+
