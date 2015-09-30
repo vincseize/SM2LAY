@@ -8,18 +8,11 @@
 		</ul>
 	</div>
 
-	<select class="w250 petit" ng-model="current.layout" ng-options="section.layout as section.label for section in sections" ng-change="changeLayout()">
+	<select class="w250 petit" ng-model="currentSection" ng-options="section.id as section.label for section in sections">
 		<option disabled>---</option>
 	</select>
 
 	<ul class="menu petit">
-		<li>CONFIG</li>
-		<sep></sep>
-		<li>OVERVIEW</li>
-		<li>PROD</li>
-		<sep></sep>
-		<li class="active">DAILIES</li>
-		<li>SCHEDULE</li>
-		<li>BANK</li>
+		<li ng-repeat="dept in depts" title="{{dept.description}}" ng-class="{'active': currentDeptName===dept.name}" ng-click="loadDept($index)">{{dept.name | uppercase}}</li>
 	</ul>
 </div>

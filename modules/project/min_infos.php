@@ -17,3 +17,7 @@
 	<sep></sep>
 	<span title="scenes"><i class="fa fa-film"></i> 3</span>
 </div>
+
+<div class="inline top pad10 mL10 light">
+	{{deptName | uppercase}}
+</div>

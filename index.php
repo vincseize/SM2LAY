@@ -18,9 +18,11 @@
 	<script src="js/vendor/angular-ui-tree.min.js"></script>	<!-- https://github.com/angular-ui-tree/angular-ui-tree -->
 
 	<link rel="stylesheet" href="css/SaAM.css" type="text/css" />
-	<script src="js/SaAM.app.js"></script>
-	<script src="js/SaAM.layout.js"></script>
-	<script src="js/interface.ctrl.js"></script>				<!-- NAVIGATION controller (layouts and modules) -->
+	<script src="js/SaAM.app.js"></script>						<!-- MAIN SaAM ANGULAR APPLICATION DEFINITION -->
+	<script src="js/SaAM.factories.js"></script>				<!-- SaAM FACTORIES (application-wide objects definition) -->
+	<script src="js/SaAM.services.js"></script>					<!-- SaAM SERVICES (application-wide services definition) -->
+	<script src="js/SaAM.layout.js"></script>					<!-- JQUERY LAYOUT (outer layout configuration) -->
+	<script src="js/interface.ctrl.js"></script>				<!-- NAVIGATION BODY CONTROLLER (layouts and modules) -->
 
 </head>
 <body ng-controller="interfaceCtrl">
@@ -37,7 +39,7 @@
 			</div>
 			<div class="ui-layout-center noBg" id="main_outer">
 				<div class="ui-layout-center">
-					<div class="includer" ng-include="layouts[current.layout]" id="main_inner" ng-controller="innerLayoutCtrl"></div>
+					<div class="includer" ng-include="layouts[currentUI.dept.layout]" id="main_inner"></div>
 				</div>
 				<div class="ui-layout-west bgGrey2" id="panel_nav">
 					<div class="ui-layout-center noBg">

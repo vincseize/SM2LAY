@@ -15,8 +15,8 @@ $(function(){
 			initClosed:				false
 		},
 		west: {
-			minSize:				"15%",
-			size:					"20%",
+			minSize:				250,
+			size:					272,
 			maxSize:				"45%",
 			initClosed:				false
 		}
@@ -27,13 +27,13 @@ $(function(){
 
 
 <div class="ui-layout-north pad10">
-	<div class="includer" ng-include="zones.north"></div>
+	<div class="includer" ng-include="currentUI.dept.modules.north"></div>
 </div>
 
 <div class="ui-layout-center pad10">
-	<div class="includer" ng-include="zones.center"></div>
+	<div class="includer" ng-include="currentUI.dept.modules.center"></div>
 </div>
 
 <div class="ui-layout-west pad10">
-	<div class="includer" ng-include="zones.west"></div>
+	<div class="includer" ng-include="currentUI.dept.modules.west"></div>
 </div>

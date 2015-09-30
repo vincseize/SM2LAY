@@ -1,0 +1,2 @@
+
+<h2>DAILIES : RECENT EVENTS</h2>
