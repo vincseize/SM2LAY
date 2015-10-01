@@ -96,7 +96,7 @@ $( document ).ready(function() {
 			});
 			
 			$('#clear_layout').click(function() {
-				window.location.replace( "template_constructor.php" );
+				window.location.replace( "layout_chooser.php" );
 			});
 			
 			$('#create_template_next_step2').click(function() {

@@ -1,276 +1,357 @@
-<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+ <!-- drag and drop -->
+
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="js/lory.min.js"></script><!--  http://www.jqueryrain.com/?tq56vm_M   Lory slide system-->
+<link rel="stylesheet" type="text/css" href="css/app.css" />
+
+
+  
+  
+
+<style>
+
+	.list{ min-height: 120px;} /* you need to set the size of the ul otherwise it may not detect the dropped item */
+	.list li{
+		display: inline-block;
+		list-style-type: none;
+		padding-right: 20px;
+	}
+	
+	
+	
+	
+</style>
+
+
 <script>
-	$( document ).ready(function() {	
-		
-		
-		
-		
-		
-		
-		
-		$("#dialog").dialog({
-			autoOpen: false,
-			modal: true,
-			width: 600,
-			height: 400,
-			buttons: {
-					"Close": function() {
-						$(this).dialog("close");
-					}
-				}
+	$(document).ready(function($) {	
+		$( "#sort_top,#sort_left, #sort_right, #sort_center, #sort_bottom, #sort1" ).sortable({
+		  helper:"clone", 
+		  opacity:0.5,
+		  cursor:"hand",
+		  connectWith: ".list",
+		  receive: function( event, ui ){
+			if($(ui.sender).attr('id')==='sort1' 
+			   && $('#sort2').children('li').length>3){
+			  $(ui.sender).sortable('cancel');
+			}
+		  }
 		});
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				var defauft_click_here = 'Click here to manage this ';		
-		
-				$('#create_template_cancel').click(function() {
-					window.location.replace( "template_constructor.php" );
-				});
 
-				////////////////////////////////////////
-				
-				$('#top_select').change(function(){
-						var txt = $('#top_select').val();
-						$("#top_button").html(defauft_click_here+txt);
-						$('#top_button').show(); 
-						if(txt=='type'){$('#top_button').hide();}
-				});
-				
-				$('#top_button').click(function(e) {
-					var txt = $('#top_select').val();
-					$( "#top_container" ).append( "<p>Choice "+txt+" Ui to do</p>" );
-					$( "#left_container_cell" ).css('background-color','grey');
-					$( "#right_container_cell" ).css('background-color','grey');
-					$( "#center_container_cell" ).css('background-color','grey');
-					$( "#bottom_container_cell" ).css('background-color','grey');
-					
-					$('#middle_row').css('display','none');
-					$('#bottom_row').css('display','none');
-					$('#tb_vignette').css('display','block');
-					$('#top_button').css('display','none');
-					$('#validate_template').css('display','none');
-					
-					$("#slider_choice").load("slider.html");
-					
-					
-					
-					
+		$( "#sort1,#sort2" ).disableSelection();
+	});
 
-					
-					//$("#dialog").html("");
-					//$("#dialog").dialog("option", "title", "Loading...").dialog("open");
-					//$("#dialog").load('modal.php', function() {
-						//$(this).dialog("option", "title", $(this).find("h2").text());
-						//$(this).find("h1").remove();
-					//});
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-				});
-
-				
-				////////////////////////////////////////
-				
-				$('#left_select').change(function(){
-						var txt = $('#left_select').val();
-						$("#left_button").html(defauft_click_here+txt);
-						$('#left_button').show(); 	
-						if(txt=='type'){$('#left_button').hide();}
-				});
-				
-				$('#left_button').click(function() {
-					var txt = $('#left_select').val();
-					$( "#left_container" ).append( "<p>Choice "+txt+" Ui to do</p>" );
-				});
-
-				/////////////////////////////////////////////
-				$('#right_select').change(function(){
-						var txt = $('#right_select').val();
-						$("#right_button").html(defauft_click_here+txt);
-						$('#right_button').show(); 	
-						if(txt=='type'){$('#right_button').hide();}
-				});				
-				
-				$('#right_button').click(function() {
-					var txt = $('#right_select').val();
-					$( "#right_container" ).append( "<p>Choice "+txt+" Ui to do</p>" );
-					
-				});
-				
-				/////////////////////////////////////////////		
-				$('#bottom_select').change(function(){
-						var txt = $('#bottom_select').val();
-						$("#bottom_button").html(defauft_click_here+txt);
-						$('#bottom_button').show(); 	
-						if(txt=='type'){$('#bottom_button').hide();}
-				});			
-		
-				$('#bottom_button').click(function() {
-					var txt = $('#bottom_select').val();
-					$( "#bottom_container" ).append( "<p>Choice "+txt+" Ui to do</p>" );
-				});
-				
-				///////////////////////////////////
-	});	
 </script>
 
 
+ <style>
+	#droppable {
+		left: 250px;
+		top: 0;
+		width: 100%;
+		height: 400px;
+		background: #999;
+		color: #fff;
+		padding: 10px;
+  }
+  </style>
+  
+ 
+
+
+
+<style>
+	
+	*{
+		margin:0;
+		padding:0;
+	}
+	
+	header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 130px;
+		background-color: #000;
+		vertical-align: center;
+	}
+	
+	section {
+		position: fixed;
+		top: 120;	
+		background-color: #ccc;
+		margin:0;
+		padding:0;
+	}
+	
+	.table_layout {
+		border-collapse:collapse;
+		
+		border-width:4px;
+		border-style:solid; 
+		border-color:black;
+		width:100%;
+		height:82%;
+	 }
+	.table_layout th, td {
+		border:1px solid black;
+		
+	 }
+	.table_layout td {
+		text-align:center;
+	 }
+	.table_layout caption {
+		font-weight:bold;
+	 }
+	
+	
+	
+	#wrapper_top{
+		background-color: red;
+		height:100%;
+	}
+	#wrapper_left{
+		background-color: green;
+		// min-width: 120px;
+		// min-height: 120px;
+		height:100%;
+	}
+	#wrapper_center{
+		background-color: yellow;
+		height:100%;
+	}
+	#wrapper_right{
+		background-color:blueviolet;
+		height:100%;
+	}
+	#wrapper_bottom{
+		background-color:orange;
+		height:100%;
+	}
+</style>
+
+
+<header></header>
+
+
+
+	
+            <div class="slider js_variablewidth variablewidth">
+                <div class="frame js_frame" id="origin">
+                    <ul class="slides js_slides" id="sort1" class="list">
+                        <li class="js_slide" style="width: 220px;">MODULE A</li>
+                        <li class="js_slide" style="width: 190px;">MODULE B</li>
+                        <li class="js_slide" style="width: 150px;">MODULE C</li>
+                        <li class="js_slide" style="width: 130px;">MODULE D</li>
+                        <li class="js_slide" style="width: 250px;">MODULE E</li>
+                        <li class="js_slide" style="width: 180px;">MODULE F</li>
+                        <li class="js_slide" style="width: 200px;">MODULE G</li>
+                        <li class="js_slide" style="width: 140px;">MODULE H</li>
+                        <li class="js_slide" style="width: 120px;">MODULE I</li>
+                        <li class="js_slide" style="width: 240px;">MODULE J</li>
+                    </ul>
+                </div>
+
+                <span class="js_prev prev">
+                    <img src="css/left.png" height="50">
+                </span>
+
+                <span class="js_next next">
+                    <img src="css/right.png" height="50">
+                </span>
+            </div>
+
+
+          
+
+	
+	
+    <script>
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var variableWidth    = document.querySelector('.js_variablewidth');
+
+            lory(variableWidth, {
+                rewind: true
+            });
+
+
+            function handleEvent(e) {
+                var newSpan = document.createElement('span');
+                var time = new Date();
+                time = time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + ',' + time.getMilliseconds();
+                var newContent = document.createTextNode('[' + time + '] Event dispatched: "' + e.type + '"');
+                newSpan.appendChild(newContent);
+                e.target.nextElementSibling.appendChild(newSpan);
+            }
+
+            events.addEventListener('before.lory.init', handleEvent);
+            events.addEventListener('after.lory.init', handleEvent);
+            events.addEventListener('before.lory.slide', handleEvent);
+            events.addEventListener('after.lory.slide', handleEvent);
+
+            events.addEventListener('on.lory.resize', handleEvent);
+            events.addEventListener('on.lory.touchend', handleEvent);
+            events.addEventListener('on.lory.touchmove', handleEvent);
+            events.addEventListener('on.lory.touchstart', handleEvent);
+            events.addEventListener('on.lory.destroy', handleEvent);
+
+            lory(events, {
+                infinite: 1
+            });
+        });
+    </script>
 
 
 
 
-<table width="100%" height="10%"  style="background-color:#38C0FF">
-	<tr>
-		<td>
-			<div id="slider_choice"></div>
-			<div id="validate_template">
-				<button id="create_template_validation">VALIDATE TEMPLATE</button>	
-				<button id="create_template_cancel">CANCEL</button>	
-				menu top sera toujours fixe, les autres collapsable et rezizable par default
-			</div>
-		</td>
-		<td width="1%">
-				<table width="200px" height="100%" id="tb_vignette" style="display:none">
-				  <tr style="background-color:green">
-					<th colspan="3">Gallery</th>
-				  </tr>
-				  <tr style="background-color:grey">
-					<td></td>
-					<td></td>
-					<td></td>
-				  </tr>
-				  <tr  style="background-color:grey">
-					<td colspan="3"></td>
-				  </tr>
-				</table>
-		</td>
-	</tr>
-</table>
-
-<table border="1" width="100%" height="89%">
-  <tr height="10%">
-	  <th colspan="3" valign="top">
-		<div style="background-color: black;color:white;width:100%;text-align: center">
-			<select id='top_select'>
-				<option value="type">type content</option>
-				<option value="menu">menu</option>
-				<option value="gallery">gallery</option>
-
-			</select>
-		</div>
-		<div>
-				<button id="top_button"  style='display: none;'>Click Here to choose your menu</button>	
-		</div>
-		<div id='top_container'></div>
-	  </th>
-  </tr>
-  <tr id="middle_row">
-	  <td width="25%"  valign="top" id='left_container_cell'>
-		  
-		<div style="background-color: black;color:white;width:100%;text-align: left">
-			<select id='left_select'>			
-				<option value="type">type content</option>
-				<option value="menu">menu</option>				
-				<option value="gallery">gallery</option>
-				<option value="result">result</option>
-			</select>
-		</div>
-		  
-		<div>
-				<button id="left_button"  style='display: none;'>Click Here to choose your ...</button>	
-		</div>
-		<div id='left_container'></div>
-		  
-		  
-		  
-		  
-	  </td>
-	  <td valign="top"  id='center_container_cell'>
-		<div style="background-color: black;color:white;width:100%;text-align: center">
-
-			<select id='venter_select'>
-				<option value="type">type content</option>
-				<option value="result">result</option>
-				<option value="gallery">gallery</option>
-			</select>
-
-		</div>
-		<div>
-				<button id="center_button"  style='display: none;'>Click Here to choose your content visual result</button>	
-		</div>
-		  content result from menu(s)
-	  </td>
-	  <td valign="top" id='right_container_cell'>
-		  <div style="background-color: black;color:white;width:100%;text-align: right">
-			<select id='right_select'>
-				<option value="type">type content</option>
-				<option value="menu">menu</option>
-				<option value="result">result</option>
-				<option value="gallery">gallery</option>
-			</select>
-		  </div>
-		  <div>
-				<button id="right_button"  style='display: none;'>Click Here to choose your ...</button>	
-		</div>
-		<div id='right_container'></div>
-		  
-	  </td>
-  </tr>
-  <tr height="16%" id="bottom_row">
-	  <td colspan="3" align="center" valign="top"  id='bottom_container_cell'>
-		  
-		<div style="background-color: black;color:white;width:100%;text-align: center">
-			<select id='bottom_select'>
-				<option value="type">type content</option>
-				<option value="result">result</option>
-				<option value="gallery">gallery</option>
-			</select>
-		</div> 
-		  		  <div>
-				<button id="bottom_button"  style='display: none;'>Click Here to choose your ...</button>	
-		</div>
-		<div id='bottom_container'></div>
-	  </td>
-  </tr>
-</table>
-
-
-<div id="dialog"></div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>	</section>
+
+
+
+				<table class="table_layout" >
+			  <tr height="10%">
+				<th colspan="3">             
+
+
+						<div id="wrapper_top">
+							
+							<ul id="sort_top" class="list">
+
+							</ul>
+							
+
+						</div>
+
+
+				</th>
+			  </tr>
+			  <tr>
+				  <td width="10%">
+					  
+						<div id="wrapper_left">
+							
+							<ul id="sort_left" class="list">
+
+							</ul>
+							
+
+						</div>				  
+					  
+				  </td>
+				  <td>
+					  
+					  
+					  <div id="wrapper_center">
+							
+								<ul id="sort_center" class="list">
+
+								</ul>
+							
+
+						</div>	
+					  
+					  
+				  </td>
+				  <td width="10%">
+					  
+					  	<div id="wrapper_right">
+							
+								<ul id="sort_right" class="list">
+
+								</ul>
+							
+
+						</div>	
+					  
+				  </td>
+			  </tr>
+			  <tr height="10%">
+				  <td colspan="3">
+					  
+					  <div id="wrapper_bottom">
+							<div id="bottom" class="fbox">
+							<ul id="sort_bottom" class="list">
+
+							</ul>
+							</div>
+
+						</div>
+					  
+					  
+				  </td>
+			  </tr>
+			</table>
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
