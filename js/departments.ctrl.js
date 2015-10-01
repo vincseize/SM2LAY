@@ -1,22 +1,26 @@
 
-saam.controller('departmentsCtrl', function($scope, saamUI, deptsList){
+saam.controller('departmentsCtrl', function($scope, saamUI, sectsList, deptsList){
 
-	$scope.depts = deptsList.departments;
+	$scope.sections = sectsList.sections;
+	$scope.depts	= deptsList.departments;
+	$scope.deptFinal = deptsList.departments[deptsList.departments.length-1];	// Final is the last department of the list
 
-	$scope.sections = [
-		{id:0, name:'MAIN',  label:'PROJECT MAIN SECTION'},
-		{id:1, name:'SHOTS', label:'SEQ. & SHOTS'},
-		{id:2, name:'ASSETS', label:'ASSETS'},
-		{id:3, name:'SCENES', label:'SCENES'},
-		{id:4, name:'TASKS', label:'TASKS'}
-	];
-
-	$scope.currentSection  = 0;
+	$scope.currentSection  = saamUI.currentUI.section.id;
 	$scope.currentDeptName = saamUI.currentUI.dept.name;
+
+	$scope.changeSection = function(){
+		saamUI.setCurrentSect($scope.currentSection);
+		$scope.currentDeptName = saamUI.currentUI.dept.name;
+	};
 
 	$scope.loadDept = function(deptIdx){
 		saamUI.setCurrentDept(deptIdx);
-		$scope.currentDeptName = deptsList.departments[deptIdx].name;
+		$scope.currentDeptName = saamUI.currentUI.dept.name;
+	};
+
+	$scope.loadFinal = function(){
+		saamUI.setCurrentDept(deptsList.departments.length-1);
+		$scope.currentDeptName = saamUI.currentUI.dept.name;
 	};
 
 });

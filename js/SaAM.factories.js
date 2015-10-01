@@ -52,11 +52,27 @@ saam.factory('modulesList', function(){
 });
 
 /**
+ * SECTIONS FACTORY
+ */
+saam.factory('sectsList', function(){
+	return {
+		sections: [
+			{id:0, name:'MAIN',		label:'PROJECT MAIN SECTION'},
+			{id:1, name:'SHOTS',	label:'SEQ. & SHOTS'},
+			{id:2, name:'ASSETS',	label:'ASSETS'},
+			{id:3, name:'SCENES',	label:'SCENES'},
+			{id:4, name:'TASKS',	label:'TASKS'}
+		]
+	};
+});
+
+/**
  * DEPARTMENTS FACTORY
  */
 saam.factory('deptsList', function(modulesList){
 	return {
 		departments: [
+			/////////////////////////////////////////////// MAIN SECTION
 			{
 				id: 10,
 				section: 'MAIN',
@@ -102,6 +118,132 @@ saam.factory('deptsList', function(modulesList){
 					center: modulesList.modules.home[0],
 					east:	modulesList.modules.bank[1],
 					south:	modulesList.modules.menus[2]
+				}
+			},
+			/////////////////////////////////////////////// SEQ. & SHOTS SECTION
+			{
+				id: 20,
+				section: 'SHOTS',
+				name: 'Scenario',
+				description: "Project's scenario text",
+				layout: 4,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 21,
+				section: 'SHOTS',
+				name: 'Tech. script',
+				description: "Project's technical script",
+				layout: 4,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 22,
+				section: 'SHOTS',
+				name: 'Storyboard',
+				description: "Project's storyboard",
+				layout: 4,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			/////////////////////////////////////////////// ASSETS SECTION
+			{
+				id: 30,
+				section: 'ASSETS',
+				name: 'Concept',
+				description: "Assets concept department",
+				layout: 4,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 31,
+				section: 'ASSETS',
+				name: 'Modeling',
+				description: "Assets modeling department",
+				layout: 4,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 32,
+				section: 'ASSETS',
+				name: 'Texturing',
+				description: "Assets texturing department",
+				layout: 3,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			/////////////////////////////////////////////// SCENES SECTION
+			{
+				id: 40,
+				section: 'SCENES',
+				name: 'Concept',
+				description: "Scenes concept department",
+				layout: 5,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			/////////////////////////////////////////////// TASKS SECTION
+			{
+				id: 50,
+				section: 'TASKS',
+				name: 'Root',
+				description: "Global Tasks of the project",
+				layout: 2,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 51,
+				section: 'TASKS',
+				name: 'Assets',
+				description: "Project's Tasks about assets",
+				layout: 2,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 52,
+				section: 'TASKS',
+				name: 'Scenes',
+				description: "Project's Tasks about scenes",
+				layout: 2,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			{
+				id: 53,
+				section: 'TASKS',
+				name: 'Shots',
+				description: "Project's Tasks about sequences and shots",
+				layout: 2,
+				modules: {
+					center: modulesList.modules.project[0]
+				}
+			},
+			/// END OF DEPARTMENTS LIST
+			/////////////////////////////////////////////// SPECIAL (FINAL)	-- must be the last department of the list! --
+			{
+				id: 999,
+				section: 'ALL',
+				name: 'Final',
+				description: "Global project video player",
+				layout: 2,
+				modules: {
+					center: modulesList.modules.project[0]
 				}
 			}
 		]
