@@ -153,7 +153,7 @@ padding-right: 20px;
 				<th colspan="3">             
 
 
-						<div id="wrapper_top" class="fbox">
+						<div id="wrapper_top">
 							
 							<ul id="sort_top" class="list">
 
@@ -237,7 +237,7 @@ padding-right: 20px;
 
 <script>
 	$(document).ready(function($) {	
-		$( "#sort1, #sort2,#sort_top" ).sortable({
+		$( "#sort1,#sort_top,#sort_left,#sort_right,#sort_center,#sort_bottom" ).sortable({
 		  helper:"clone", 
 		  opacity:0.5,
 		  cursor:"hand",
@@ -250,7 +250,7 @@ padding-right: 20px;
 		  }
 		});
 
-		$( "#sort1,#sort2,#sort_top" ).disableSelection();
+		$( "#sort1,#sort_top,#sort_left,#sort_right,#sort_center,#sort_bottom" ).disableSelection();
 	});
 
 </script>
