@@ -85,29 +85,29 @@ $height_layout_resized = 800;
   
 
 <script>
-$( document ).ready(function() {	
-	
-			$('#close_create_template').click(function() {
-				// $('#projects_tabs').show();
-				// $('#departments').show();
-				// $('#main_outer').load('./layouts/5-zones.php');
-				// return false;
-				window.location.replace( "../../index.php" );
-			});
-			
-			$('#clear_layout').click(function() {
-				window.location.replace( "layout_chooser.php" );
-			});
-			
-			$('#create_template_next_step2').click(function() {
-				window.location.replace( "template_constructor.php" );
-			});
+		$( document ).ready(function() {	
 
-});	
+					$('#close_create_template').click(function() {
+						// $('#projects_tabs').show();
+						// $('#departments').show();
+						// $('#main_outer').load('./layouts/5-zones.php');
+						// return false;
+						window.location.replace( "../../index.php" );
+					});
+
+					$('#clear_layout').click(function() {
+						window.location.replace( "layout_chooser.php" );
+					});
+
+					$('#create_template_next_step2').click(function() {
+						window.location.replace( "template_constructor.php" );
+					});
+
+		});	
+
+
 		
-		
-		
-	</script>
+</script>
   
   
   

@@ -31,7 +31,7 @@
 				// $('#departments').hide();
 				// $('#body_outer').load('./templates/create_template/layout_chooser.php');
 				// return false;
-				window.location.href = './templates/create_template/layout_chooser.php';
+				window.location.href = './templates/create_template/constructor.php';
 			});
 		});	
 	</script>

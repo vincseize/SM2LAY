@@ -40,7 +40,7 @@
 		  }
 		});
 
-		$( "#sort1,#sort2" ).disableSelection();
+		$( "#sort1" ).disableSelection();
 	});
 
 </script>
@@ -86,25 +86,6 @@
 		padding:0;
 	}
 	
-	.table_layout {
-		border-collapse:collapse;
-		
-		border-width:4px;
-		border-style:solid; 
-		border-color:black;
-		width:100%;
-		height:82%;
-	 }
-	.table_layout th, td {
-		border:1px solid black;
-		
-	 }
-	.table_layout td {
-		text-align:center;
-	 }
-	.table_layout caption {
-		font-weight:bold;
-	 }
 	
 	
 	
@@ -133,10 +114,14 @@
 </style>
 
 
-<header></header>
+<div id="slider_menu_layout" style="display:block"><?php include('menu_layouts.php');?></div>
+<div id="container_layout" style="display:block"><?php include('5-zones.php');?></div>
 
 
 
+
+
+<div id="slider_menu_modules" style="display:block">
 	
             <div class="slider js_variablewidth variablewidth">
                 <div class="frame js_frame" id="origin">
@@ -147,7 +132,7 @@
                         <li class="js_slide" style="width: 130px;">MODULE D</li>
                         <li class="js_slide" style="width: 250px;">MODULE E</li>
                         <li class="js_slide" style="width: 180px;">MODULE F</li>
-                        <li class="js_slide" style="width: 200px;">MODULE G</li>
+                        <li class="js_slide" style="width: 200px;">MODULE Gallery</li>
                         <li class="js_slide" style="width: 140px;">MODULE H</li>
                         <li class="js_slide" style="width: 120px;">MODULE I</li>
                         <li class="js_slide" style="width: 240px;">MODULE J</li>
@@ -208,6 +193,7 @@
 
 
 
+</div>
 
 
 
@@ -217,52 +203,9 @@
 
 
 
+<div id="container_template" style="display:block">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section>	</section>
-
-
-
-				<table class="table_layout" >
+			<table class="table_layout" >
 			  <tr height="10%">
 				<th colspan="3">             
 
@@ -337,6 +280,10 @@
 			</table>
 
 	
+</div>
+
+
+
 
 	
 	

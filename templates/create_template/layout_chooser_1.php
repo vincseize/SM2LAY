@@ -35,7 +35,7 @@
 
 
 <header>
-	<nav><?php include('slider_menu.html');?></nav>
+	<nav><?php include('menu_templates.php');?></nav>
 </header>
 
 
